@@ -546,7 +546,7 @@ Factorization is crucial for solving inequalities and finding roots.
         \end{enumerate}
         \item Does the equation $\sqrt{a^2}=a$ hold for all $a\in\bbR$?
         \item Suppose moving $6$ meters to the right of the origin can be denoted as $+2$. How can moving $15$ meters to the left of the origin be denoted?
-        \item There are three points $A$, $B$, and $C$ on the number line, with coordinate $1$, $6$, and $8$, respectively. Suppose one set the origin to $B$ without changing the unit lengh. What is the coordinate of $A$? What is the coordinate of $C$?
+        \item There are three points $A$, $B$, and $C$ on the number line, with coordinate $1$, $6$, and $8$, respectively. Suppose one set the origin to $B$ without changing the unit length. What is the coordinate of $A$? What is the coordinate of $C$?
         \item If $a-b=18$ and $|a|=|b|$, what are $a$ and $b$?
         \item If $a$ and $b$ are with different signs, i.e., $ab<0$, and $|a|=|b|$, what is the value of $a+b$?
         \item Suppose $a$ and $b$ are all negative. If $|a|>|b|$, what is the order between $a$ and $b$?
@@ -740,7 +740,7 @@ The functions that figure most prominently in single-variable calculus are the p
 \subsection*{Polynomial Functions}
 
 \begin{definition}[Polynomial]
-    Let $n\in\bbN\cup\{0\}$. An expression of the form $$a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$$ is a \underline{polynomial}.
+    Let $n\in\bbN\cup\{0\}$. An expression of the form $$a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$$ with $a_i\in\bbR$, $i=0, 1, \dots, n$, is a \underline{polynomial}. This is called a real polynomial of degree $n$.
 \end{definition}
 
 \begin{example}
@@ -766,16 +766,57 @@ The functions that figure most prominently in single-variable calculus are the p
     A \underline{polynomial function} $P$ is a function with output a polynomial, i.e., $P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$.
 \end{definition}
 
+\begin{theorem}[Fundamental Theorem of Algebra]
+    Every single-variable real polynomial of degree $n$ has exactly $n$ complex roots counted with multiplicity.
+\end{theorem}
+
 \subsection*{Rational Functions}
 
 \begin{definition}[Rational Function]
     A \underline{rational function} is the quotient of two polynomial functions, i.e., $R(x)=\dfrac{P_1(x)}{P_2(x)}$.
 \end{definition}
 
+A rational function will have a vertical asymptote at $x=a$ such that $P_2(a)=0$. For example, the function $f(x)=\dfrac{1}{x}$ has a vertical asymptote at $x=0$. See Figure 1.4.1.
+
+\begin{example}
+    Find vertical asymptotes of the following functions.
+    \begin{enumerate}
+        \item $f_1(x)=\dfrac{1}{x^2+4x+4}$.
+        \item $f_2(x)=\dfrac{1}{x^2-1}$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For function $f_1$, since $x^2+4x+4=(x+2)^2$, the vertical asymptote is $x=-2$. For function $f_2$, since $x^2-1=(x+1)(x-1)$, the vertical asymptotes are $x=1$ and $x=-1$. \qed
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{reciprocal_of_x.png}\figtag{1.4.1}
+\end{center}
 
 \subsection*{Trigonometric Functions}
 
+Trigonometric functions are originally the ratio between sides of a right triangle. For example, if I have a triangle with lengths $a, b, c$ and an angle $\theta$.
 
+\begin{center}
+    \includegraphics[width=0.2\textwidth]{triangle.JPG}\figtag{1.4.2}
+\end{center}
+
+The ratio $\dfrac{a}{c}$ of the length of the hypotenuse $c$ to the length of the opposite leg $a$ is called $\sin\theta$. The ratio $\dfrac{b}{c}$ of the length of the hypotenuse $c$ to the length of the adjecent leg $b$ is called $\cos\theta$. The ratio $\dfrac{\sin\theta}{\cos\theta}$ is called $\tan\theta$, is also the ratio of the length of the adjecent leg $b$ to the length of the opposite leg $a$.
+
+\subsubsection*{Radian Measure}
+
+Degree measure, traditionally used to measure angles, has a serious
+drawback. It is artificial; there is no intrinsic connection between a degree and the geometry of a rotation. Why choose $360^\circ$ for one complete revolution? Why not $100^\circ$ or $400^\circ$? There is another way of measuring angles that is more natural and lends itself better to the methods of calculus: measuring angles in radians.
+
+We first introduce $\pi$, the ratio of the length of a half circumference of a circle to the length diameter of the circle. Since a hald circumference is just a half circle, we say that $\pi\ \text{rad}$ is $180^\circ$. Hence, $2\pi\ \text{rad}$ is $360^\circ$. The following table gives some common angles (rotations) measured both in degrees and in radians.
+
+\begin{center}
+    \begin{tabular}{|cccccccccccc|}
+        \hline
+        degrees & $0^\circ$ & $30^\circ$ & $45^\circ$ & $60^\circ$ & $90^\circ$ & $120^\circ$ & $135^\circ$ & $150^\circ$ & $180^\circ$ & $270^\circ$ & $360^\circ$\\
+        \hline
+        radians & $0$ & $\dfrac{1}{6}\pi$ & $\dfrac{1}{4}\pi$ & $\dfrac{1}{3}\pi$ & $\dfrac{1}{2}\pi$ & $\dfrac{2}{3}\pi$ & $\dfrac{3}{4}\pi$ & $\dfrac{5}{6}\pi$ & $\pi$ & $\dfrac{3}{2}\pi$ & $2\pi$\\[0.2em]
+        \hline
+    \end{tabular}
+\end{center}
 
 \subsection*{Exponential Functions}
 
