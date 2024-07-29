@@ -625,7 +625,7 @@ For the first scenario, $(3, \infty)$ is the set of solutions. For the second sc
 \textbf{Proof}. We have the natural equality $2ab\leq2|ab|$. Adding $a^2+b^2$ to both sides, we have $$a^2+2ab+b^2\leq |a|^2+2|a||b|+|b|^2.$$ Since both sides are non-negative, taking square roots yeilds $$|a+b|\leq |a|+|b|.$$ \qed
 
 \subsection*{Exercise}
-\begin{enumerate}
+\begin{enumerate}[label=\arabic*.]
     \item Solve the following inqualities. Afterwards, express the solution set as an interval or as the union of intervals and mark the solution set on a number line.
     \begin{enumerate}
         \item $2+3x<5$.
@@ -651,25 +651,21 @@ For the first scenario, $(3, \infty)$ is the set of solutions. For the second sc
 
 Functions can be imagined as a black box. You throw a parameter $x$ into the black box $f$, and then you obtain the result $f(x)$. Mathematically speaking, a function is a correspondence between two sets, domain and range. For example, a teacher is marking exams for students. There are twenty questions in total. A student gets five points with a correct answer to a question. In this case, the score is a function of the number of correct answers. In mathematical language, we say the score is $f_{\text{score}}(x)=5x$, where $x$ is the number of correct answers. Since the number of correct answers can only be positive integers among $0$ and $20$, we say the domain (the set where the function is valid) is $\{0, 1, 2, \dots, 19, 20\}$. The range, the set with all positive outcomes for the function, is $\{0, 5, 10, \dots, 95, 100\}$ in this case.
 
-To be more specific, we use a colon ``$:$'' and an arrow ``$\to$'' to indicate the function and its domain and codomain (a set that contains the range). One generally indicates codomain since one does not know exactly the range is. For example, I can write $f_{\text{score}}:\{0, 1, 2, \dots, 19, 20\}\to\bbN$, which indicates that the domain of the function $f_{\text{score}}$ is $\{0, 1, 2, \dots, 19, 20\}$, and all its output will be in $\bbN$.
+To be more specific, we use a colon ``$:$'' and an arrow ``$\to$'' to indicate the function and its domain and codomain (a set that contains the range). One generally indicates codomain since one does not know exactly the range is. For example, I can write $f_{\text{score}}:\{0, 1, 2, \dots, 19, 20\}\to\bbN$, which indicates that the domain of the function $f_{\text{score}}$ is $\{0, 1, 2, \dots, 19, 20\}$, and all the outputs will be in $\bbN$.
 
 Take another familiar example, the square function $f_{\text{square}}$. The square function outputs the square of an input. Since you can square any real numbers, we write $f_{\text{square}}:\bbR\to\bbR$ with $f(x)=x^2$ for all $x\in\bbR$, or more specificly, $f_{\text{square}}:\bbR\to\bbR_{\geq0}$ with $f(x)=x^2$ for all $x\in\bbR$. One can use the arrow with a small stroke on the left ``$\mapsto$'' to indicate the way of mapping. For example, $x\mapsto x^2$ is the square function. We are familiar with the absolute value. In fact, the absolute value is a function with domain $\bbR$ and range $[0, \infty)$.
 
 Usually, we call the input $x$ the independent variable (or argument), and we call the output $y$ the dependent variable, since $y$ varies on $x$.
 
-\subsection*{Graph of a Function}
-
-The graph of a function is simply defined to be the set of tuples $(x, f(x))$.
+\begin{definition}[Injective, Surjective, and Bijective]
+    A function $f:X\to Y$ is \underline{injective} if $x_1\ne x_2\in X$ implies $f(x_1)\ne f(x_2)$. A function $g:X\to Y$ is \underline{surjective} if there exists a $x\in X$ such that $f(x)=y$ for all $y\in Y$. A function is bijective if it is surjective and injective.
+\end{definition}
 
 \begin{definition}[Graph]
     Let $f:X\to Y$ be a function. The \underline{graph} of $f$ is the set $$\{(x, y)\mid x\in X\text{ and }y=f(x)\}.$$
 \end{definition}
 
-We will talk more about this topic in Chapter 4.
-
 \subsection*{Symmetry}
-
-There are some special genres of functions.
 
 \begin{definition}[Even and Odd]
     A function $f:X\to Y$ is said to be \underline{even} if $f(x)=f(-x)$ for all $x\in X$. A function $g:X\to Y$ is said to be \underline{odd} if $f(x)=g(-x)$ for all $x\in X$.
@@ -692,9 +688,10 @@ Functions in both genres are all called ``symmetric'' since an even function is 
 
 \subsection*{Exercise}
 
-\begin{enumerate}
+\begin{enumerate}[label=\arabic*.]
     \item Calculate $f(0), f(1), f(-1)$ with the following functions.
     \begin{enumerate}
+        \item $f(x)=|x|$.
         \item $f(x)=2x^2-3x+2$.
         \item $f(x)=\dfrac{2x-1}{x^2+4}$.
         \item $f(x)=\sqrt{x^2+2x+5}$.
@@ -818,17 +815,320 @@ We first introduce $\pi$, the ratio of the length of a half circumference of a c
     \end{tabular}
 \end{center}
 
-\subsubsection*{Sine, Cosine, and Tangent}
+\subsubsection*{Sine and Cosine}
+
+Let $\theta$ be any real number. The rotation $\theta$ takes the point $A$ with coordinates $(1, 0)$ to some point $P$, also on the unit circle. The coordinates of $P$ are completely determined by $\theta$ and have names related to $\theta$. The second coordinate of $P$ is $\sin\theta$, and the first coordinate of $P$ is $\cos\theta$. Figure 1.4.3 illustrates the idea. To simplify the diagram, we have taken $\theta$ from $0$ to $2\pi$.
+
+For each real $\theta$, the rotation $\theta$ and the rotation $\theta+2\pi$ take the point $A$ to exactly the same point $P$. If follows that for each $\theta$, $$\sin(\theta+2\pi)=\sin\theta\qquad\text{and}\qquad\cos(\theta+2\pi)=\cos\theta.$$
+
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{unit_circle_rotation.JPG}\figtag{1.4.3}
+\end{center}
+
+A rotation of $\pi\ \text{rad}$ takes each point to the point antipodal to it: $(x, y)\mapsto(-x, -y)$. Thus, $$\sin(\theta+\pi)=-\sin\theta\qquad\text{and}\qquad\cos(\theta+\pi)=-\cos\theta.$$
+
+In Figure 1.4.4, we consider two rotations, a positive rotation $\theta$ and its negative counterpart $-\theta$, from point $A$ respectively to point $P$ and to point $P'$. From the figure, you can see that $$\sin(-\theta)=-\sin\theta\qquad\text{and}\qquad\cos(-\theta)=\cos\theta.$$
+
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{unit_circle_inverse_rot.JPG}\figtag{1.4.4}
+\end{center}
+
+\subsubsection*{Tangent, Cotangent, Secant, Cosecant}
+
+We have four more trigonometric functions: the tangent, the cotangent, the secant, the cosecant. These are obtained as follows: $$\tan\theta=\dfrac{\sin\theta}{\cos\theta},\qquad\cot\theta=\dfrac{\cos\theta}{\sin\theta},\qquad\sec\theta=\dfrac{1}{\cos\theta},\qquad\text{and}\qquad\csc\theta=\dfrac{1}{\sin\theta}.$$ Note that the tangent function is an odd function, $$\tan(-\theta)=\dfrac{\sin(-\theta)}{\cos(-\theta)}=\dfrac{-\sin\theta}{\cos\theta}=-\tan\theta.$$
+
+\subsubsection*{Identities}
+
+\begin{theorem}[Trigonometric Identity]
+    Let $\theta, \alpha, \beta\in\bbR$. The following always hold.
+    \begin{enumerate}
+        \item $(\sin\theta)^2+(\cos\theta)^2=1, \qquad (\tan\theta)^2+1=(\sec\theta)^2,\qquad 1+(\cot\theta)^2=(\csc\theta)^2$.
+        \item $\sin(\theta+2\pi)=\sin\theta,\qquad\cos(\theta+2\pi)=\cos\theta,\qquad\tan(\theta+\pi)=\tan\theta$.
+        \item $\sin(-\theta)=-\sin\theta,\qquad\cos(-\theta)=\cos\theta,\qquad\tan(-\theta)=-\tan(\theta)$.
+        \item $\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta,\qquad\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$.
+    \end{enumerate}
+\end{theorem}
+
+\subsection*{Exponential Functions and Logarithmic Function}
+
+\begin{definition}[Exponential Function]
+    Let $a>0$ with $a\ne1$. Let $f:\bbR\to\bbR^+$ be a function defined by $f(x)=a^x$. The function $f$ is called an \underline{exponential function} with base $a$.
+\end{definition}
+
+\begin{definition}[Logarithmic Function]
+    Let $b>0$ with $b\ne 1$. Let $g:\bbR^+\to\bbR$ be defined by $b^{g(x)}=x$. Then $g(x)$ is well-defined function and is called a \underline{logarithmic function}. The function $g$ is denoted by $\log_b$.
+\end{definition}
+
+\begin{theorem}
+    Let $a>0$ with $a\ne 0$. Then, $a^{\log_a(x)}=x$. That is, the exponential function and the logarithmic function are inverse functions.
+\end{theorem}
+
+\subsection*{Exercise}
+
+\begin{enumerate}[label=\arabic*.]
+    \item State whether the function is a polynomial function, a rational function, or neither. If it is a polynomial function, give the degree.
+    \begin{enumerate}
+        \item $f(x)=3$.
+        \item $f(x)=-x^{-1}$.
+        \item $f(x)=\dfrac{x^2-4}{\sqrt{2}}$.
+        \item $f(x)=\dfrac{x^2-2x-8}{x+2}$.
+        \item $f(x)=\dfrac{(\sqrt{x}+2)(\sqrt{x}-2)}{x^2+4}$.
+        \item $f(x)=\dfrac{1}{x^2-4}$.
+        \item $f(x)=x+\dfrac{1}{x}$.
+    \end{enumerate}
+    \item Convert the degree measure into radian measure.
+    \begin{enumerate}
+        \item $225^\circ$.
+        \item $-210^\circ$.
+        \item $450^\circ$.
+        \item $1^\circ$.
+    \end{enumerate}
+    \item Convert the radian measure into degree measure.
+    \begin{enumerate}
+        \item $-3\pi/2$.
+        \item $5\pi/4$.
+        \item $2$.
+        \item $-\sqrt{3}$.
+    \end{enumerate}
+    \item Compute $\sin\theta$ and $\cos\theta$ with $\theta=0, \dfrac{\pi}{6}, \dfrac{\pi}{4}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{2\pi}{3}, \dfrac{3\pi}{4}, \pi.$
+    
+\end{enumerate}
 
 
-\subsection*{Exponential Functions}
+\section{Operations on Functions}
 
+\setlength{\delimitershortfall}{0pt}
 
+Just like numbers, we can add functions $$(f+g)(x)=f(x)+g(x),$$ multiply functions $$(fg)(x)=f(x)\cdot g(x),$$ and divide functions $$\left(\dfrac{f}{g}\right)(x)=\dfrac{f(x)}{g(x)}$$ given that $g(x)\ne 0$. We can also multiply a function $f$ by a real number $\alpha$ $$(\alpha f)(x)=\alpha\cdot f(x).$$
 
-\subsection*{Logarithmic Function}
+\setlength{\delimitershortfall}{13.5pt}
+
+\begin{example}
+    Let $f(x)=\sqrt{x+3}$ and $g(x)=\sqrt{5-x}-2$.
+    \begin{enumerate}
+        \item Determine the domain of $f$, of $g$, and of $f+g$.
+        \item Specify $(f+g)(x)$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. Note that the number in the square root cannot be less than zero. The domain of $f$ is $[-3, \infty)$, and the one of $g$ is $(-\infty, 5]$. Hence, the domain of $f+g$ is $[-3, \infty)\cap(-\infty, 5]=[-3, 5]$. The function $(f+g):[-3, 5]\to\bbR$ is defined by $(f+g)(x)=\sqrt{x+3}+\sqrt{5-x}-2$. \qed
+
+Aside from the operations you already knew, there is a new operation, called ``composition.''
+
+\begin{definition}[Composition]
+    Let $f:\tilde{X}\to X$ and $g:X\to Y$. We define the \underline{composition} of $f$ with $g$, denoted by $f\circ g$, by $(f\circ g)(x)=f(g(x))$.
+\end{definition}
+
+\begin{example}
+    Find $(f_i\circ g_i)(x)$ and $(g_i\circ f_i)(x)$ for the following functions.
+    \begin{enumerate}
+        \item $f_1(x)=x^2, \quad g_1(x)=\sin x$.
+        \item $f_2(x)=x^2-1, \quad g_2(x)=\sqrt{3-x}$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For the first pair of functions, $(f_1\circ g_1)(x)=(\sin x)^2$ and $(g_1\circ f_1)(x)=\sin(x^2)$. For the second pair, $(f_2\circ g_2)(x)=|x-3|-1$ and $(g_2\circ f_2)(x)=\sqrt{4-x^2}$. \qed
+
+Note that the domain and range will change after composition.
+
+\subsection*{Exercise}
+
+\setlength{\delimitershortfall}{0pt}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Let $f(x)=x+\dfrac{1}{\sqrt{x}}$ and $g(x)=-\sqrt{x}$. Find the following function.
+    \begin{enumerate}
+        \item $2f$.
+        \item $6f$.
+        \item $3g$.
+        \item $6f+3g$.
+        \item $f-g$.
+        \item $fg$.
+    \end{enumerate}
+    \item Suppose $f$ and $g$ are odd. What can you conclude about $fg$?
+    \item Suppose $f$ and $g$ are even. What can you conclude about $fg$?
+    \item Given a function $f:\bbR\to\bbR$. Show that the function $g(x)=f(x)+f(-x)$ is even.
+    \item Given a function $f:\bbR\to\bbR$. Show that the function $h(x)=f(x)-f(-x)$ is even.
+    \item Find $f$ such that $f\circ g=F$ for the following functions.
+    \begin{enumerate}
+        \item $g(x)=\dfrac{1+x^2}{1+x^4}, \quad F(x)=\dfrac{1+x^4}{1+x^2}$.
+        \item $g(x)=x^2, \quad F(x)=ax^2+b$.
+        \item $g(x)=3x, \quad F(x)=2\sin(3x)$.
+        \item $g(x)=-x^2, \quad F(x)=\sqrt{a^2+x^2}$.
+    \end{enumerate}
+    \item Find $g$ such that $f\circ g=F$ for the following functions.
+    \begin{enumerate}
+        \item $f(x)=x^3, \quad F(x)=(1-1/x^4)^2$.
+        \item $f(x)=x+\dfrac{1}{x}, \quad F(x)=a^2x^2+\dfrac{1}{a^2x^2}$.
+        \item $f(x)=x^2+1, \quad F(x)=(2x^3-1)^2+1$.
+        \item $f(x)=\sin x, \quad F(x)=\sin\left(\dfrac{1}{x}\right)$.
+    \end{enumerate}
+    \item Find $f\circ g$ and $g\circ f$.
+    \begin{enumerate}
+        \item $f(x)=x^2, \quad g(x)=\sqrt{x}$.
+        \item $f(x)=3x+1, \quad g(x)=x^2$.
+        \item $f(x)=1-x^2, \quad g(x)=\sin x$.
+        \item $f(x)=x^3+1, \quad g(x)=\sqrt[3]{x-1}$.
+    \end{enumerate}
+    \item Find $f\circ g\circ h$ if $f(x)=\dfrac{1}{x}, g(x)=x^2+1, h(x)=\cos x$.
+\end{enumerate}
+
+\setlength{\delimitershortfall}{13.5pt}
 
 % Continuous limit
 \chapter{Limits and Continuity}
+
+We could begin by saying that limits are important in calculus, but that would be a major understatement. Without limits, calculus would not exist. Every single notion of calculus is a limit in one sense or another.
+
+\section{The Idea of Limit}
+
+Technically there are several limit processes, but they are all very similar. Once you master one of them, the others will pose few difficulties. The limit process that we start with is the one that leads to the notion of continuity and the notion of differentiability. At this stage our approach is completely informal. All we are trying to do here is lay an intuitive foundation for the mathematics that begins in Section 2.2.
+
+The idea of limit is simple. We first fix the point on the $x$-axis that we care, say $c$. The limit speaks for only one thing: how does the function behave near $c$? Just near $c$ but not equal to $c$. If there is a point $L$ on the $y$-axis such that $f(x)$ can get closer to it as $x$ gets closer to $c$ (not equal to $c$), we simply say the limit of $f(x)$ as $x$ approaches $c$ is $L$ and write $$\lim_{x\to c}f(x)=L.$$
+
+\begin{example}
+    Find $\displaystyle\lim_{x\to c_i}f_i(x)$ for the following.
+    \begin{enumerate}
+        \item $f_1(x)=4x+5, \quad c_1=2$.
+        \item $f_2(x)=\sqrt{1-x}, \quad c_2=-8$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For $\displaystyle\lim_{x\to c_1}f_1(x)$, since $4x+5$ tends to $13$ when $x$ tends to $2$, $\displaystyle\lim_{x\to 2}4x+5=13$. For $\displaystyle\lim_{x\to c_2}f_2(x)$, since $\sqrt{1-x}$ tends to $3$ when $x$ tends to $-8$, $\displaystyle\lim_{x\to -8}\sqrt{1-x}=3$. \qed
+
+The limit is not relavent whether the function is defined at $c$ or not. Limit is just about how the function behaves near $c$ and not at $c$. Take a look as the three cases in Figure 2.1.1. 
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{limit_intuitive.JPG}\figtag{2.1.1}
+\end{center}
+
+The first case is that $f(c)=L$. The second case is that $f$ is not defined at $x=c$. The third case is that $f(c)\ne L$. However, in these three cases, $$\lim_{x\to c}f(x)=L.$$
+
+\begin{example}
+    Find $\displaystyle\lim_{x\to c_i}f_i(x)$ for the following.
+    \begin{enumerate}
+        \item $f_1(x)=\dfrac{x^2-9}{x-3}, \quad c_1=3$.
+        \item $f_2(x)=\dfrac{x^3-8}{x-2}, \quad c_2=2$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For $\displaystyle\lim_{x\to c_1}f_1(x)$, the function $f_1$ is not defined at $x=3$. However, to find the limit at $x=3$, it does not matter whether $f_1$ is defined at $x=3$ or not. We just care about $f_1$ near $x=3$ but not equal to $3$. For $x\ne 3$, $\dfrac{x^2-9}{x-3}=x+3$. Hence, $\displaystyle\lim_{x\to 3}\dfrac{x^2-9}{x-3}=\lim_{x\to 3}x+3=6$. For $\displaystyle\lim_{x\to c_2}f_2(x)$, the function $f_2$ is not defined at $x=2$. However, for $x\ne 2$, $\dfrac{x^3-8}{x-2}=x^2+2x+4$. Hence, $\displaystyle\lim_{x\to 2}\dfrac{x^3-8}{x-2}=\lim_{x\to 2}x^2+2x+4=12$. \qed
+
+One can make $x$ approach $c$ either from the right side or from the left side. Sometimes, a function cannot have a limit with approaches from both sides. The ``one-sided limits'' may exist. We write $$\lim_{x\to c^-}f(x)=L$$ to indicate that $f(x)$ approaches $L$ when $x$ approaches $c$ from the left, and we write $$\lim_{x\to c^+}f(x)=L$$ to indicate that $f(x)$ approaches $L$ when $x$ approaches $c$ from the right.
+
+\begin{example}
+    Find the left-hand-side limit $\displaystyle\lim_{x\to 3^-}f(x)$ and the right-hand-side limit $\displaystyle\lim_{x\to 3^+}f(x)$ in Figure 2.1.2. Note that $f$ is not defined at $x=3$.
+\end{example}
+\textbf{Solution}. From the figure, we have $\displaystyle\lim_{x\to 3^-}f(x)=2$ and $\displaystyle\lim_{x\to 3^+}f(x)=4$. \qed
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth/3]{two-side_limits.JPG}\figtag{2.1.2}
+\end{center}
+
+For a limit to exist, both the left-hand-side limit and the right-hand-side limit must exist and equal.
+
+\begin{example}
+    Let $f(x)=\dfrac{x}{|x|}$ defined on $(-\infty, 0)\cup(0, \infty)$. Note that $f(x)=1$ for $x>0$ and $f(x)=-1$ for $x<0$. Find the two one-sided limits of $f$ at $x=0$ and show that the limit of $f$ at $x=0$ does not exist.
+\end{example}
+\textbf{Solution}. Since $f(x)=1$ for $x>0$, we easily have $\displaystyle\lim_{x\to 0^+}f(x)=1$ regardless of the fact that $f$ is not defined at $x=0$. Similarly, $\displaystyle\lim_{x\to 0^-}f(x)=-1$. Since the left-hand-side limit and the right-hand-side limit are not equal, the limit does not exist. \qed
+
+\begin{remark}
+    For a limit to exist, it must be finite. Otherwise, we say the limit does not exist. However, if a limit does not exist, it might be either oscillating or unbounded (infinite).
+\end{remark}
+
+\begin{example}
+    In Figure 2.1.3, the limits $\displaystyle\lim_{x\to 3} f(x)$ and $\displaystyle\lim_{x\to 9} f(x)$ do not exist since the function is unbounded near $3$ and $9$.
+\end{example}
+
+\begin{center}
+    \includegraphics[width=0.7\textwidth/3]{unbounded_limits.JPG}\figtag{2.1.3}
+\end{center}
+
+\begin{example}
+    In Figure 2.1.4, the graph of $f(x)=\dfrac{1}{x-2}$ is depicked. As $x$ approaches $4$, $\dfrac{1}{x-2}$ approaches $\dfrac{1}{2}$. Hence, $\displaystyle\lim_{x\to 4}\dfrac{1}{x-2}=\dfrac{1}{2}$. However, as approaches $2$, $\dfrac{1}{x-2}$ gets larger and lager, and $\dfrac{1}{x-2}$ is hence unbounded.
+\end{example}
+
+\begin{center}
+    \includegraphics[width=0.34\textwidth]{limit_reciprocal.JPG}\figtag{2.1.4}
+\end{center}
+
+\begin{example}
+    Let $$f(x)=\left\{\begin{array}{rl}
+        1-x^2, \quad & \text{if $x<1$},\\\dfrac{1}{x-1}, \quad & \text{if $x>1$}.
+    \end{array}\right.$$ Find the two one-sided limits of $f$ at $x=1$ and show that the limit of $f$ at $x=1$ does not exist.
+\end{example}
+\textbf{Solution}. For $x<1$, $f(x)=1-x^2$. Thus, $$\lim_{x\to1^-}f(x)=0.$$ For $x>1$, $f(x)=\dfrac{1}{x-1}$. Thus, as $x$ approaches $1$ from the right side, $f(x)$ get larger and larger, and $\dfrac{1}{x-1}$ is hence unbounded. Therefore, $\displaystyle\lim_{x\to 1}f(x)$ does not exist.
+
+\subsection*{Exercise}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Find $\displaystyle\lim_{x\to c^-}f(x), \lim_{x\to c^+}f(x), \lim_{x\to c}f(x), f(c)$ with the given graph of $f$ and number $c$.
+    \begin{enumerate}
+        \item $c=2$.
+        \item $c=3$.
+        \item $c=3$.
+        \item $c=4$.
+        \item $c=-2$.
+        \item $c=1$.
+        \item $c=1$.
+        \item $c=-1$.
+        \item $c=2$.
+        \item $c=3$.
+    \end{enumerate}
+    \item Decide on intuitive grounds whether the ondicated limit exists. Evaluate it if it exists.
+    \begin{enumerate}
+        \item $\displaystyle\lim_{x\to 2}2x-1$.
+        \item $\displaystyle\lim_{x\to-2}x^2-2x+4$.
+        \item $\displaystyle\lim_{x\to 1}2-5x$.
+        \item $\displaystyle\lim_{x\to 0}\dfrac{1}{|x|}$.
+        \item $\displaystyle\lim_{x\to 3}\dfrac{2x-6}{x-3}$.
+        \item $\displaystyle\lim_{x\to 1}x+\dfrac{1}{x}$.
+        \item $\displaystyle\lim_{x\to 1}\dfrac{x^2-1}{x-1}$.
+        \item $\displaystyle\lim_{x\to 1}\dfrac{x^3-1}{x-1}$.
+        \item $\displaystyle\lim_{x\to 1}\dfrac{x^3-1}{x+1}$.
+        \item $\displaystyle\lim_{x\to 1}\dfrac{x^2+1}{x^2-1}$.
+        \item $\displaystyle\lim_{x\to 0}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            1, \quad & \text{if $x\ne0$},\\
+            3, \quad & \text{if $x=0$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 1}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            3x, \quad & \text{if $x<1$},\\
+            3, \quad & \text{if $x>1$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 4}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            x^2, \quad & \text{if $x\ne4$},\\
+            0, \quad & \text{if $x=4$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 0}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            -x^2, \quad & \text{if $x<0$},\\
+            x^2, \quad & \text{if $x>0$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 0}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            x^2, \quad & \text{if $x<0$},\\
+            1+x, \quad & \text{if $x>0$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 1}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            2x, \quad & \text{if $x<1$},\\
+            x^2+1, \quad & \text{if $x>1$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 0}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            1, \quad & \text{if $x\in\mathbb{Q}$},\\
+            -1, \quad & \text{if $x\notin\mathbb{Q}$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 1}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            2x, \quad & \text{if $x\in\mathbb{Q}$},\\
+            2, \quad & \text{if $x\notin\mathbb{Q}$}.
+        \end{array}\right.$
+    \end{enumerate}
+\end{enumerate}
+
+\section{Definition of Limit}
+
+
+
+\section{Limit Theorems}
+
+
+
+\section{Continuity}
+
+
 
 
 
