@@ -1,5 +1,17 @@
 % LaTeX Template For MATH 490 @ VCU
-\documentclass[12pt]{book}
+\documentclass[11pt]{book}
+
+\linespread{2}
+\setlength{\textwidth}{6.9in}
+\setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{-0.2in}
+\setlength{\evensidemargin}{-0.2in}
+\setlength{\topmargin}{-0.1in}
+\setlength{\headheight}{0.1in}
+\setlength{\headsep}{0.4in}
+\setlength{\footskip}{0.4in}
+\setlength{\delimitershortfall}{13.5pt}
+\delimiterfactor=100
 
 \usepackage{hyperref}
 \usepackage{amsmath}
@@ -20,6 +32,8 @@
 
 \setlist{nosep}
 \setlist[enumerate]{label=\roman*.}
+
+\setlength{\multicolsep}{6.2pt}
 
 \renewcommand{\arraystretch}{0.85}
 
@@ -47,7 +61,7 @@
 
 \newtheoremstyle{break}
     {\topsep/1.5} % space above
-    {\topsep/2.2} % space below
+    {\topsep/1.5} % space below
     {}          % body font
     {}          % indent amount
     {\rmfamily} % theorem head font
@@ -58,7 +72,7 @@
 
 \newtheoremstyle{no_label}
     {\topsep/1.5} % space above
-    {\topsep/2.2} % space below
+    {\topsep/1.5} % space below
     {}          % body font
     {}          % indent amount
     {\rmfamily} % theorem head font
@@ -76,7 +90,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{theorem}{Theorem}[section]
 \newmdtheoremenv[
     backgroundcolor=crlcolor,
@@ -86,7 +100,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{corollary}[theorem]{Corollary}
 \newmdtheoremenv[
     backgroundcolor=lemcolor,
@@ -96,7 +110,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{lemma}[theorem]{Lemma}
 \newmdtheoremenv[
     backgroundcolor=axicolor,
@@ -106,7 +120,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{axiom}[theorem]{Axiom}
 \newmdtheoremenv[
     backgroundcolor=procolor,
@@ -116,7 +130,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{proposition}[theorem]{Proposition}
 \newmdtheoremenv[
     backgroundcolor=defcolor,
@@ -126,7 +140,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{definition}[theorem]{Definition}
 \newmdtheoremenv[
     backgroundcolor=whacolor,
@@ -136,7 +150,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{problem}[theorem]{Problem}
 \newmdtheoremenv[
     backgroundcolor=whacolor,
@@ -146,7 +160,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{exercise}[theorem]{Exercise}
 
 \theoremstyle{no_label}
@@ -158,7 +172,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{question}{Question}
 \newmdtheoremenv[
     backgroundcolor=reccolor,
@@ -168,7 +182,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{recall}{Recall}
 \newmdtheoremenv[
     backgroundcolor=notcolor,
@@ -178,7 +192,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{notation}{Notation}
 \newmdtheoremenv[
     backgroundcolor=rmkcolor,
@@ -188,7 +202,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{remark}{Remark}
 \newmdtheoremenv[
     backgroundcolor=xmpcolor,
@@ -198,7 +212,7 @@
     bottomline=true,
     rightline=true,
     skipabove=\topsep/1.5,
-    skipbelow=\topsep/2.2
+    skipbelow=\topsep/1.5
 ]{example}{Example}
 
 \DeclareMathOperator{\arcsec}{arcsec}
@@ -240,19 +254,6 @@
 \newcommand{\figtag}[1]{\\[-1.2em]Figure {#1}}
 \newcommand{\pfexercise}{This is an exercise left to the reader.}
 
-\linespread{2}
-\setlength{\textwidth}{6.9in}
-\setlength{\textheight}{8.6in}
-\setlength{\oddsidemargin}{-0.2in}
-\setlength{\evensidemargin}{-0.2in}
-\setlength{\topmargin}{-0.2in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0.4in}
-\setlength{\footskip}{0.6in}
-\setlength{\multicolsep}{6.2pt}
-\setlength{\delimitershortfall}{13.5pt}
-\delimiterfactor=100
-
 \setcounter{section}{0}
 \numberwithin{equation}{section}
 
@@ -285,7 +286,7 @@
 \addcontentsline{toc}{chapter}{Preface}
 \chapter*{Preface}
 
-This note is summarized by Yung-Hsuan Chang.
+This book is summarized by Yung-Hsuan Chang refering to \emph{Calculus: One and Several Variables}, 10th edition and \emph{Calculus: Early Treanscendentals}, 9th edition.
 
 \newpage
 \pagenumbering{arabic}
@@ -301,11 +302,11 @@ Generally speaking, calculus takes ideas from elementary mathematics and extends
     \item from volume of a rectangular solid to volume of a solid with a curved boundary, etc.
 \end{enumerate}
 
-\section{Basics of Elementary Mathematics}
+\section{Basics}
 
 In this section we review the terminology, notation, and formulas of elementary mathematics.
 
-\subsubsection*{Sets}
+\subsection*{Sets}
 
 \begin{definition}[Set]
     A \underline{set} is a collection of objects. We call objects in a set \underline{elements} or \underline{members} of the set. A set is usually denoted with a capital letter.
@@ -345,7 +346,7 @@ One can define a set with several ways:
 
 We will have some examples for you as a reference. Of course, we will have exercises.
 
-\subsubsection*{The Real Number System}
+\subsection*{The Real Number System}
 
 We start to learn counting from the set of all natural numbers (positive integers) $$\bbN=\{1, 2, 3, 4, 5, \dots\}.$$ After we graduated the elementary school, we obtained the expended concept of the set of integers $$\mathbb{Z}=\{0, 1, -1, 2, -2, \dots\}=\{a - b\mid a\in\bbN\text{\ and \ }b\in\bbN\},$$ the set of ratial numbers $$\mathbb{Q}=\{a/b\mid a\in\mathbb{Z}\text{\ and\ }b\in\bbN\},$$ and the set of real numbers $\bbR$. The construction (definition) of $\bbR$ is quite tedious. A relatively formal way to define $\bbR$ is to define $\bbR$ as the unique set contains $\mathbb{Q}$ with the least upper bound property. Since it is out of the scope of this book, we skip more definitions. One can imagine that $\bbR$ is the collection of all non-complex numbers that you have learned so far. These sets are so crucial that mathematicians use special letters $\mathbb{N}, \mathbb{Z}, \mathbb{Q}, \bbR$ to indicate such.
 
@@ -360,7 +361,7 @@ We start to learn counting from the set of all natural numbers (positive integer
     The real number system $\bbR$ and the rationals $\mathbb{Q}$ are dense. That is, there must be a real (rational, respectively) between two real numbers (rational numbers).
 \end{proposition}
 
-\subsubsection*{Order Properties}
+\subsection*{Order Properties}
 
 In the real number system, we have the so-called order properties. 
 
@@ -375,15 +376,7 @@ In the real number system, we have the so-called order properties.
     \end{enumerate}
 \end{theorem}
 
-\begin{exercise}
-    Answer the following questions.
-    \begin{enumerate}
-        \item We have four people, Anne, Bell, Christine, and Derek, comparing their heights. Suppose Christine is shorter than Anne, Bell is taller than Derek, and Christine is taller than Bell. What is the order of the four people with their height from the tallest to the shortest?
-        \item Suppose $a+2=b+20=c-4$. What is the biggest number? What is the smallest number?
-    \end{enumerate}
-\end{exercise}
-
-\subsubsection*{The Number Line}
+\subsection*{The Number Line}
 
 On a horizontal line we choose a point $O$. We call this point the origin and assign to it coordinate $0$. Now we choose a point $U$ to the right of $O$ and assign to it coordinate $1$. See Figure 1.1.1. The distance between $O$ and $U$ determines a scale (a unit length). We go on as follows: the point a units to the right of $O$ is assigned coordinate $a$; the point a units to the left of $O$ is assigned coordinate $-a$.
 
@@ -397,17 +390,7 @@ In this manner we establish a one-to-one correspondence between the points of a 
     \includegraphics[width=0.65\textwidth]{number_line_example.JPG}\figtag{1.1.2}
 \end{center}
 
-\begin{exercise}
-    Determine true or false for each of the following statements:
-    \begin{enumerate}
-        \item $1$ is the smallest positive integer.
-        \item $-1$ is the smallest negative integer.
-        \item $0$ is an integer.
-        \item $1$ is the smallest positive integer.
-    \end{enumerate}
-\end{exercise}
-
-\subsubsection*{Absolute Value}
+\subsection*{Absolute Value}
 
 Let $a\in\bbR$. The symbol $|a|$ is called ``the absolute value of $a$,'' and is defined by \vspace*{0.5em} \begin{equation*}
     |a|=\left\{\begin{array}{rl}a,&\quad\text{if $a\geq0$,}\\-a&\quad\text{if $a<0$.}\end{array}\right.\\[0.5em]
@@ -427,34 +410,7 @@ We have some properties regarding the absolute values.
     \end{enumerate}
 \end{theorem}
 
-\begin{exercise}
-    Answer the following questions.
-    \begin{enumerate}
-        \item How many points are there is with unit length $4$ to the origin?
-        \item Does the equation $\sqrt{a^2}=a$ hold for all $a\in\bbR$?
-        \item Suppose moving $6$ meters to the right of the origin can be denoted as $+2$. How can moving $15$ meters to the left of the origin be denoted?
-        \item There are three points $A$, $B$, and $C$ on the number line, with coordinate $1$, $6$, and $8$, respectively. Suppose one set the origin to $B$ without changing the unit lengh. What is the coordinate of $A$? What is the coordinate of $C$?
-        \item If $a-b=18$ and $|a|=|b|$, what are $a$ and $b$?
-        \item If $a$ and $b$ are with different signs, i.e., $ab<0$, and $|a|=|b|$, what is the value of $a+b$?
-        \item Suppose $a$ and $b$ are all negative. If $|a|>|b|$, what is the order between $a$ and $b$?
-    \end{enumerate}
-\end{exercise}
-
-\begin{exercise}
-    Answer the following questions.
-    \begin{enumerate}
-        \item If $3|a+2|+2|b-7|=0$, what are $a$ and $b$?
-        \item If $|4-a|=1$, what is $a$?
-        \item If $a>0$, what is $|a|$?
-        \item If $a<0$, what is $|a|$?
-        \item How many integers $a$ are there satisfying $4<|a|<7$?
-        \item How many integers $c$ are there satisfying $|c|\leq 4$?
-        \item If $|a-2|=2$, what is $a$?
-        \item If $|c+2|=8$, what is $c$?
-    \end{enumerate}
-\end{exercise}
-
-\subsubsection*{Interval}
+\subsection*{Interval}
 
 Accurately, intervals are connected subsets in the real number system. We use a pair of parentheses with a comma $(\cdot, \cdot)$ to indicate open intervals and use a pair of brackets with a comma $[\cdot, \cdot]$ to indicate closed intervals.
 
@@ -466,8 +422,8 @@ The closed interval $[a, b]$ is the open interval $(a, b)$ with endpoints $a$ an
 \begin{center}
     \includegraphics[width=0.45\textwidth]{interval_cc.JPG}
 \end{center} We have seven more types of intervals: \begin{align*}
-    (a, b]&=\{x\bbR\mid a<x\leq b\},\\
-    [a, b)&=\{x\bbR\mid a\leq x<b\},\\
+    (a, b]&=\{x\in\bbR\mid a<x\leq b\},\\
+    [a, b)&=\{x\in\bbR\mid a\leq x<b\},\\
     (a, \infty)&=\{x\in\bbR\mid x>a\},\\
     [a, \infty)&=\{x\in\bbR\mid x\geq a\},\\
     (-\infty, b)&=\{x\in\bbR\mid x<b\},\\
@@ -477,20 +433,11 @@ The closed interval $[a, b]$ is the open interval $(a, b)$ with endpoints $a$ an
 
 Interval notation is easy to remember: we use a square bracket to include an endpoint and a parenthesis to exclude it. On a number line, inclusion is indicated by a solid dot, exclusion by an open dot. The symbols $\infty$ and $-\infty$, read “infinity” and “negative infinity” (or “minus infinity”), do not represent real numbers. In the intervals listed above, the symbol $\infty$ is used to indicate that the interval extends indefinitely in the positive direction; the symbol $-\infty$ is used to indicate that the interval extends indefinitely in the negative direction.
 
-\begin{exercise}
-    Answer the following questions.
-    \begin{enumerate}
-        \item What is $[0, 2]\cap(2, 4)$?
-        \item What is $[0, 1]\setminus(0, \infty)$?
-        \item What is the set $A$ such that only elements $x$ in $A$ suffice $|x|\leq 3$?
-    \end{enumerate}
-\end{exercise}
-
-\subsubsection*{Basic Algebra}
+\subsection*{Basic Algebra}
 
 We use a small number on the top-right of another number to indicate the ``power'', which essentially means the number of multiplication.
 \begin{notation}
-    Let $r\in\bbR$ and $p\in\bbN$. The number $r^p$ is read ``$r$ to the power $p$'' and is with value $\overbrace{r\times r\times \cdots\times r}^{\text{$p$ times}}$. This explanation only works when the power is a positive integer.
+    Let $r\in\bbR$ and $p\in\bbN\cup\{0\}$. If $p\ne0$, then the number $r^p$ is read ``$r$ to the power $p$'' and is with value $\overbrace{r\times r\times \cdots\times r}^{\text{$p$ times}}$. This explanation only works when the power is a positive integer. If $p=0$ and $r\ne0$, we define $r^0=1$. The number $r$ is called the ``base,'' $p$ is called the ``exponent,'' and $r^p$ is called the ``power.''
 \end{notation}
 
 \begin{example}
@@ -506,6 +453,8 @@ We use a small number on the top-right of another number to indicate the ``power
     Let $a>0$ and $p>0$. The number $a^{1/p}$ is called the $p$-th root of $a$ and is the number $b$ such that $b^q=a$; it can also be written as $\sqrt[q]{a}$. If $p=2$, we just write $\sqrt{a}$. The number $a^{-p}$ is the reciprocal of $a^p$.
 \end{notation}
 
+For products and quotients of powers.
+
 \begin{theorem}[Laws of Exponents]
     Let $a>0$ and $p, q\in\mathbb R$. The following always hold.
     \begin{enumerate}
@@ -514,6 +463,19 @@ We use a small number on the top-right of another number to indicate the ``power
         \item $(a^p)^q=a^{pq}$.
     \end{enumerate}
 \end{theorem}
+
+\begin{example}
+    Show that $$a^0=1$$ with the laws of exponents given $a>0$.
+\end{example}
+\textbf{Proof}. Using $$a^{p-q}=\dfrac{a^p}{a^q},$$ we have 
+\begin{align*}
+    a^0&=a^{1-1}\\
+    &=\dfrac{a^1}{a^1}\\
+    &=1,
+\end{align*}
+which coincides the definition. \qed
+
+Furthermore, we can combine products with summations, factorizing an expression, so that we can find a root more easily.
 
 \begin{theorem}[Factorization]
     Let $a, b\in\bbR$. The following always hold.
@@ -528,6 +490,298 @@ We use a small number on the top-right of another number to indicate the ``power
     \end{enumerate}
 \end{theorem}
 
+\begin{example}
+    Evaluate the following numbers.
+    \begin{enumerate}
+        \item $255^2-245^2$.
+        \item $25+2950+295^2$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For the first number, we use $$a^2-b^2=(a-b)(a+b)$$ with $a=255$ and $b=245$. Hence, $255^2-245^2=10\cdot500=5000$. For the second number, we use $$(a+b)^2=a^2+2ab+b^2,$$ reversely, with $a=5$ and $b=295$. Hence, $25+2950+295^2=(300)^2=90000$. \qed
+
+\begin{example}
+    Factorize the following expressions.
+    \begin{enumerate}
+        \item $x^2-4x+3$.
+        \item $x^2+2x-3$.
+        \item $x^2+6x+8$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For the first expression, obeserve that $-4=(-3)+(-1)$ and $(-3)\cdot(-1)=+3$. Hence, $$x^2-4x+3=(x-3)(x-1).$$ For the second expression, obeserve that $2=3+(-1)$ and $3\cdot(-1)=-3$. Hence, $$x^2+2x-3=(x+3)(x-1).$$ For the last expression, observe that $6=2+4$ and $2\cdot4=8$. Hence, $$x^2+6x+8=(x+2)(x+4).$$ \qed
+
+Factorization is crucial for solving inequalities and finding roots.
+
+\begin{theorem}[Quadratic Formula]
+    Let $a\ne0$, $b, c\in\bbR$. The roots of the equation $$ax^2+bx+c=0$$ are $$x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}.$$ The expression $b^2-4ac$ inside the square root is called the ``discriminant'' and is denoted by $D$. If $D>0$, the equation has two distinct real roots. If $D=0$, the equation has one real root. If $D<0$, the equation has two complex roots.
+\end{theorem}
+
+\begin{example}
+    Solve the equation $$2x^2+3x-2=0.$$
+\end{example}
+\textbf{Solution}. Using the quadratic formula, $$x=\dfrac{-3\pm\sqrt{3^2+4\cdot2\cdot(-2)}}{2\cdot 2}.$$ Hence, $x=\dfrac{1}{2}$ or $x=-2$. \qed
+
+\subsection*{Exercise}
+\begin{enumerate}[label=\arabic*.]
+    \item Answer the following questions.
+    \begin{enumerate}
+        \item We have four people, Anne, Bell, Christine, and Derek, comparing their heights. Suppose Christine is shorter than Anne, Bell is taller than Derek, and Christine is taller than Bell. Arrange them with their heights.
+        \item Suppose $a+2=b+20=c-4$. What is the biggest number? What is the smallest number?
+    \end{enumerate}
+    \item Determine true or false for each of the following statements.
+    \begin{enumerate}
+        \item $1$ is the smallest positive integer.
+        \item $-1$ is the smallest negative integer.
+        \item $0$ is an integer.
+        \item $1$ is the smallest positive integer.
+    \end{enumerate}
+    \item Answer the following questions.
+    \begin{enumerate}
+        \item How many points are there is with unit length $4$ to the origin?
+        \item Evaluate the following expressions.
+        \begin{enumerate}[label=\alph*.]
+            \item $|-5|-|8|$.
+            \item $|-3-7|$.
+            \item $|5-\sqrt{5}|$.
+            \item $|2-\pi|$.
+        \end{enumerate}
+        \item Does the equation $\sqrt{a^2}=a$ hold for all $a\in\bbR$?
+        \item Suppose moving $6$ meters to the right of the origin can be denoted as $+2$. How can moving $15$ meters to the left of the origin be denoted?
+        \item There are three points $A$, $B$, and $C$ on the number line, with coordinate $1$, $6$, and $8$, respectively. Suppose one set the origin to $B$ without changing the unit lengh. What is the coordinate of $A$? What is the coordinate of $C$?
+        \item If $a-b=18$ and $|a|=|b|$, what are $a$ and $b$?
+        \item If $a$ and $b$ are with different signs, i.e., $ab<0$, and $|a|=|b|$, what is the value of $a+b$?
+        \item Suppose $a$ and $b$ are all negative. If $|a|>|b|$, what is the order between $a$ and $b$?
+    \end{enumerate}
+    \item Answer the following questions.
+    \begin{enumerate}
+        \item If $3|a+2|+2|b-7|=0$, what are $a$ and $b$?
+        \item If $|4-a|=1$, what is $a$?
+        \item If $a>0$, what is $|a|$?
+        \item If $a<0$, what is $|a|$?
+        \item How many integers $a$ are there satisfying $4<|a|<7$?
+        \item How many integers $c$ are there satisfying $|c|\leq 4$?
+        \item If $|a-2|=2$, what is $a$?
+        \item If $|c+2|=8$, what is $c$?
+    \end{enumerate}
+    \item Answer the following questions.
+    \begin{enumerate}
+        \item What is $[0, 2]\cap(2, 4)$?
+        \item What is $[0, 1]\setminus(0, \infty)$?
+        \item What is the interval $I$ such that only elements $x$ in $I$ suffice $|x|\leq 3$?
+        \item What is the interval $J$ such that only elements $x$ in $J$ suffice $x^2<16$?
+    \end{enumerate}
+    \item Answer the following questions.
+    \begin{enumerate}
+        \item If $25^{3m}=3$ and $5^{7n}=\dfrac{1}{3}$, what is the value of $(6m+7n-2)^5$?
+        \item If $8^{2a}=4$, what is the value of $8^{6a}$?
+        \item If $x^{2a}=3$, what is the value of $\dfrac{x^{3a}-x^{-a}}{x^{3a}+x^{-a}}$?
+        \item If $a\cdot567^3=10^3$ and $\dfrac{a}{10^3}=b$, what is the value of $a\cdot b$?
+    \end{enumerate}
+    \item Factorize the following expressions.
+    \begin{enumerate}
+        \item $x(b-c)-y(c-b)$.
+        \item $(x-a)(x+3)+(3-x)(x-b)$.
+        \item $(x^2+6x)^2-9^2$.
+        \item $(x^2+3x)^-(x+4)^2$.
+        \item $x^2+4x+4-y^2$
+    \end{enumerate}
+    \item Find the real roots of the equation.
+    \begin{enumerate}
+        \item $x^2-x-2=0$.
+        \item $x^2-9=0$.
+        \item $x^2-6x+9=0$.
+        \item $x^2+8x+16=0$.
+        \item $x^2-2x+5=0$.
+        \item $(x-3)^2-16=0$.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Inequalities}
+
+Inequalities can be similarly solved like one solving an equation, adding the same number to both sides or by multiplying both sides by the same positive number. The relation will be reversed when multiplied both sides by the same negative number.
+
+\begin{example}
+    Solve the inequality $$-4(3-x)\leq 12.$$
+\end{example}
+\textbf{Solution}. Multiplying both sides by $\dfrac{1}{4}$, we have $$x-3\leq 3.$$ Adding $3$ to both sides, we have $$x\leq 6.$$ Hence, the solution set is the interval $(-\infty, 6]$. \qed
+
+\begin{example}
+    Solve the inequality $$x^2-4x+3>0.$$
+\end{example}
+\textbf{Solution}. Factorizing the expression on the left, we have $$(x-3)(x-1)>0.$$ The inequality only holds when the expression $(x-3)$ and the expression $(x-1)$ are with the same sign. That is, the inquality only holds when \begin{enumerate}
+    \item $x-3>0$ and $x-1>0$, or
+    \item $x-3<0$ and $x-1<0$.
+\end{enumerate}
+For the first scenario, $(3, \infty)$ is the set of solutions. For the second scenario, $(-\infty, 1)$ is the set of solutions. Hence, the set of solutions for the inequality is $(-\infty, 1)\cup(3, \infty)$. \qed
+
+\begin{example}
+    Solve the inequality $$|x+2|<3.$$
+\end{example}
+\textbf{Solution}. Using the geometric meaning of the absolute value, the set of solutions is the set containing points with distance less than $3$ to point $-2$. Hence, the set of solutions is $(-5, 1)$. \qed\\
+\textbf{Alternative Solution}. We can write $$|x+2|<3$$ as $$-3<x+2<3.$$ Adding $-2$ to each expression of the inequalities, we have $$-5<x<1.$$ \qed
+
+\begin{theorem}[Triangle inquality]
+    Let $a, b\in\bbR$. The inequality $$|a+b|\leq |a|+|b|$$ must hold.
+\end{theorem}
+\textbf{Proof}. We have the natural equality $2ab\leq2|ab|$. Adding $a^2+b^2$ to both sides, we have $$a^2+2ab+b^2\leq |a|^2+2|a||b|+|b|^2.$$ Since both sides are non-negative, taking square roots yeilds $$|a+b|\leq |a|+|b|.$$ \qed
+
+\subsection*{Exercise}
+\begin{enumerate}
+    \item Solve the following inqualities. Afterwards, express the solution set as an interval or as the union of intervals and mark the solution set on a number line.
+    \begin{enumerate}
+        \item $2+3x<5$.
+        \item $16x+64\leq16$.
+        \item $7x(x-4)^2<0$.
+        \item $|x|<2$.
+        \item $0<|x|<1$.
+        \item $|3x+1|>5$.
+    \end{enumerate}
+    \item Each of the following sets is the solution of an inequality of the form $|x-c|<\delta$. Find $c$ and $\delta$.
+    \begin{enumerate}
+        \item $(-3, 3)$.
+        \item $(-3, 7)$.
+        \item $(-7, 3)$
+        \item $(0, 4)$.
+        \item $(a, b)$.
+    \end{enumerate}
+    \item Given that $x>1$, arrange the following in order: $$1, x, \sqrt{x}, \dfrac{1}{x}, \dfrac{1}{\sqrt{x}}.$$
+    \item Given that $0<x<1$, arrange the following in order: $$1, x, \sqrt{x}, \dfrac{1}{x}, \dfrac{1}{\sqrt{x}}.$$
+\end{enumerate}
+
+\section{Functions}
+
+Functions can be imagined as a black box. You throw a parameter $x$ into the black box $f$, and then you obtain the result $f(x)$. Mathematically speaking, a function is a correspondence between two sets, domain and range. For example, a teacher is marking exams for students. There are twenty questions in total. A student gets five points with a correct answer to a question. In this case, the score is a function of the number of correct answers. In mathematical language, we say the score is $f_{\text{score}}(x)=5x$, where $x$ is the number of correct answers. Since the number of correct answers can only be positive integers among $0$ and $20$, we say the domain (the set where the function is valid) is $\{0, 1, 2, \dots, 19, 20\}$. The range, the set with all positive outcomes for the function, is $\{0, 5, 10, \dots, 95, 100\}$ in this case.
+
+To be more specific, we use a colon ``$:$'' and an arrow ``$\to$'' to indicate the function and its domain and codomain (a set that contains the range). One generally indicates codomain since one does not know exactly the range is. For example, I can write $f_{\text{score}}:\{0, 1, 2, \dots, 19, 20\}\to\bbN$, which indicates that the domain of the function $f_{\text{score}}$ is $\{0, 1, 2, \dots, 19, 20\}$, and all its output will be in $\bbN$.
+
+Take another familiar example, the square function $f_{\text{square}}$. The square function outputs the square of an input. Since you can square any real numbers, we write $f_{\text{square}}:\bbR\to\bbR$ with $f(x)=x^2$ for all $x\in\bbR$, or more specificly, $f_{\text{square}}:\bbR\to\bbR_{\geq0}$ with $f(x)=x^2$ for all $x\in\bbR$. One can use the arrow with a small stroke on the left ``$\mapsto$'' to indicate the way of mapping. For example, $x\mapsto x^2$ is the square function. We are familiar with the absolute value. In fact, the absolute value is a function with domain $\bbR$ and range $[0, \infty)$.
+
+Usually, we call the input $x$ the independent variable (or argument), and we call the output $y$ the dependent variable, since $y$ varies on $x$.
+
+\subsection*{Graph of a Function}
+
+The graph of a function is simply defined to be the set of tuples $(x, f(x))$.
+
+\begin{definition}[Graph]
+    Let $f:X\to Y$ be a function. The \underline{graph} of $f$ is the set $$\{(x, y)\mid x\in X\text{ and }y=f(x)\}.$$
+\end{definition}
+
+We will talk more about this topic in Chapter 4.
+
+\subsection*{Symmetry}
+
+There are some special genres of functions.
+
+\begin{definition}[Even and Odd]
+    A function $f:X\to Y$ is said to be \underline{even} if $f(x)=f(-x)$ for all $x\in X$. A function $g:X\to Y$ is said to be \underline{odd} if $f(x)=g(-x)$ for all $x\in X$.
+\end{definition}
+
+Functions in both genres are all called ``symmetric'' since an even function is symmetric from the $y$-axis, and an odd function is symmetric from the origin.
+
+\begin{example}
+    Determine whether the following functions are even, odd, or neither.
+    \begin{enumerate}
+        \item $f_1(x)=x$.
+        \item $f_2(x)=x+1$.
+        \item $f_3(x)=|x|$.
+        \item $f_4(x)=x^2$.
+        \item $f_5(x)=x^3$.
+        \item $f_6(x)=2^x+2^{-x}$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. The function $f_1$ is odd since $f_1(x)=x=-f_1(x)=-(-x)$. The function $f_2$ is neither even nor odd. The function $f_3$ is even since $|x|=|-x|$. The function $f_4$ is also even. The function $f_5$ is odd. The function $f_6$ is even since $f_6(x)=2^x+2^{-x}=f_6(-x)=2^{-x}+2^x$. \qed
+
+\subsection*{Exercise}
+
+\begin{enumerate}
+    \item Calculate $f(0), f(1), f(-1)$ with the following functions.
+    \begin{enumerate}
+        \item $f(x)=2x^2-3x+2$.
+        \item $f(x)=\dfrac{2x-1}{x^2+4}$.
+        \item $f(x)=\sqrt{x^2+2x+5}$.
+        \item $f(x)=|x+3|-5x$.
+    \end{enumerate}
+    \item Calculate $f(a), f(-a), f(a+h), \dfrac{f(a+h)-f(a)}{h}$ with the following functions.
+    \begin{enumerate}
+        \item $f(x)=x^2-2x$.
+        \item $f(x)=2x^2-3x$.
+        \item $f(x)=\dfrac{1}{x-2}$.
+    \end{enumerate}
+    \item Give the domain and range of the function.
+    \begin{enumerate}
+        \item $f(x)=|x|$.
+        \item $f(x)=\dfrac{1}{x^2}$.
+        \item $f(x)=\sqrt{x-3}$.
+        \item $f(x)=\dfrac{1}{\sqrt{2-x}}$.
+    \end{enumerate}
+    \item Give the domain and range of the function and sketch the graph of the function.
+    \begin{enumerate}
+        \item $f(x)=1$.
+        \item $f(x)=-1$.
+        \item $f(x)=2x$.
+        \item $f(x)=2x+1$.
+        \item $f(x)=|x-1|$.
+        \item $f(x)=\left\{\begin{array}{rl}
+            -1,\quad&\text{if $x<0$,}\\1,\quad&\text{if $x>0$}.
+        \end{array}\right.$
+    \end{enumerate}
+    \item Determin whether the following functions are even, odd, or neither.
+    \begin{enumerate}
+        \item $f(x)=x^2+1$.
+        \item $f(x)=\dfrac{x^2}{1-|x|}$.
+        \item $f(x)=x+\dfrac{1}{x}$.
+        \item $f(x)=\sqrt[5]{x-x^3}$.
+    \end{enumerate}
+\end{enumerate}
+
+\section{Elementary Functions}
+
+The functions that figure most prominently in single-variable calculus are the polynomial functions, the rational functions, the trigonometric functions, the exponential functions, and the logarithmic functions. These functions are generally known as the elementary functions.
+
+\subsection*{Polynomial Functions}
+
+\begin{definition}[Polynomial]
+    Let $n\in\bbN\cup\{0\}$. An expression of the form $$a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$$ is a \underline{polynomial}.
+\end{definition}
+
+\begin{example}
+    The following are polynomials.
+    \begin{enumerate}
+        \item $x^2+x+1$.
+        \item $-\pi x^4-7$.
+        \item $x^{256}$.
+        \item $0$.
+    \end{enumerate}
+\end{example}
+
+\begin{example}
+    The following are \textbf{NOT} polynomials.
+    \begin{enumerate}
+        \item $x+1+\dfrac{1}{x}$.
+        \item $|x|+5$.
+        \item $\sqrt{2x}-7$.
+    \end{enumerate}
+\end{example}
+
+\begin{definition}[Polynomial Function]
+    A \underline{polynomial function} $P$ is a function with output a polynomial, i.e., $P(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_1x+a_0$.
+\end{definition}
+
+\subsection*{Rational Functions}
+
+\begin{definition}[Rational Function]
+    A \underline{rational function} is the quotient of two polynomial functions, i.e., $R(x)=\dfrac{P_1(x)}{P_2(x)}$.
+\end{definition}
+
+
+\subsection*{Trigonometric Functions}
+
+
+
+\subsection*{Exponential Functions}
+
+
+
+\subsection*{Logarithmic Function}
 
 % Continuous limit
 \chapter{Limits and Continuity}
