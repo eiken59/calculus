@@ -1402,6 +1402,14 @@ For the special matter happened in this corollary, we say that this kind of func
     &=6.
 \end{align*} \qed
 
+Here comes an extremely important theorem for calculating trigonometric limits.
+
+\begin{theorem}[Sandwich Theorem]
+    Let $f, g, h$ be functions such that $g(x)\leq f(x)\leq h(x)$ for all $x\in(c-\delta, c)\cup(c, c+\delta)$ for some $\delta>0$. If $\displaystyle\lim_{x\to c}g(x)=\lim_{x\to c}h(x)=L$, then $\displaystyle\lim_{x\to c}f(x)=L$.
+\end{theorem}
+
+% Page 92 in [1]
+
 \subsection*{Exercise}
 
 \begin{enumerate}[label=\arabic*.]
@@ -1577,8 +1585,70 @@ We can classity discontinuities with three different genres.
     \end{center}
     \item Determine whether the function is continuous at the indicated point. If not, determine the genre of each discontinuity.
     \begin{enumerate}
-        \item $f(x)=x^3-5x+1,\quad x=2$.
+        \begin{multicols}{2}
+            \item $f(x)=x^3-5x+1,\quad x=2$.
+            \item $f(x)=\sqrt{(x-3)^2+9},\quad x=3$.
+            \item $f(x)=\sqrt{x^2+4}, \quad x=-2$.
+            \item $f(x)=|x-7|,\quad x=7$.
+        \end{multicols}
+        \item $f(x)=\left\{\begin{array}{rl}
+            x^2+4, \quad & \text{if $x<2$},\\
+            x^3, \quad & \text{if $x\geq 2$},
+        \end{array}\right., \quad x=2$.
+        \item $f(x)=\left\{\begin{array}{rl}
+            x^2+5, \quad & \text{if $x<2$},\\
+            x^3, \quad & \text{if $x\geq 2$},
+        \end{array}\right., \quad x=2$.
+        \item $f(x)=\left\{\begin{array}{rl}
+            x^2+4, \quad & \text{if $x<2$},\\
+            5, \quad & \text{if $x=2$},\\
+            x^3, \quad & \text{if $x>2$},
+        \end{array}\right., \quad x=2$.
+        \item $f(x)=\left\{\begin{array}{rl}
+            x^2+5, \quad & \text{if $x<2$},\\
+            10, \quad & \text{if $x=2$},\\
+            x^3+1, \quad & \text{if $x>2$},
+        \end{array}\right., \quad x=2$.
+        \item $f(x)=\left\{\begin{array}{rl}
+            \dfrac{|x-1|}{x-1}, \quad & \text{if $x\ne1$},\\
+            0, \quad & \text{if $x=1$},
+        \end{array}\right., \quad x=1$.
+        \item $f(x)=\left\{\begin{array}{rl}
+            1-x, \quad & \text{if $x<1$},\\
+            1, \quad & \text{if $x=1$},\\
+            x^3-1, \quad & \text{if $x>1$},
+        \end{array}\right., \quad x=1$.
     \end{enumerate}
+    \item If possible, redefine the function at $x=1$ so that $f$ is continuous at $x=1$. Otherwise, explain the reason that $f$ cannot be continuous with any redefinition.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $f(x)=\dfrac{x^2-1}{x-1}$.
+            \item $f(x)=\dfrac{x-1}{|x-1|}$.
+            \item $f(x)=\dfrac{(x-1)^2}{|x-1|}$.
+            \item $f(x)=\dfrac{1}{x-1}$.
+        \end{multicols}
+    \end{enumerate}
+    \item If possible, redefine the function at $x=5$ so that $f$ is continuous at $x=5$. Otherwise, explain the reason that $f$ cannot be continuous with any redefinition.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $f(x)=\dfrac{\sqrt{x+4}-3}{x-5}$.
+            \item $f(x)=\dfrac{\sqrt{x+4}-3}{\sqrt{x-5}}$.
+            \item $f(x)=\dfrac{\sqrt{2x-1}-3}{x-5}$.
+            \item $f(x)=\dfrac{\sqrt{x^2-7x+16}-\sqrt{6}}{(x-5)\sqrt{x+1}}$.
+        \end{multicols}
+    \end{enumerate}
+    \item What is the value of $A$ so that the function $$f(x)=\left\{\begin{array}{rl}
+        x^2, \quad & \text{if $x<1$},\\
+        Ax-3, \quad & \text{if $x\geq1$}
+    \end{array}\right.$$ is continuous at $x=1$?
+    \item What is the value of $A$ so that the function $$f(x)=\left\{\begin{array}{rl}
+        A^2x^2, \quad & \text{if $x\leq2$},\\
+        (1-A)x, \quad & \text{if $x>2$}
+    \end{array}\right.$$ is continuous at $x=2$?
+    \item What is the value of $A$ so that the function $$f(x)=\left\{\begin{array}{rl}
+        1+Ax, \quad & \text{if $x<2$},\\
+        A-x, \quad & \text{if $x\geq2$}
+    \end{array}\right.$$ is continuous at $x=2$? Is $f$ continuous on $\bbR$?
 \end{enumerate}
 
 % Formulae for derivatives
