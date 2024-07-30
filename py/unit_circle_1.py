@@ -68,8 +68,8 @@ def plot_implicit_functions(functions, title, contours, labels, x_interval, y_in
 
     plt.text(0.2, 0.2, '$\\theta$', horizontalalignment='center', fontsize=font_size)  # Adjust position and label as needed
 
-    plt.xlabel('$x$', fontsize=font_size)
-    plt.ylabel('$y$', fontsize=font_size)
+    plt.xlabel('$x$-axis', fontsize=font_size)
+    plt.ylabel('$y$-axis', fontsize=font_size)
     plt.xticks(fontsize=font_size)
     plt.yticks(fontsize=font_size)
     plt.title(title, fontsize=font_size)

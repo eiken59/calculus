@@ -2,26 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import math
 
-def circ(x, y):
-    return x ** 2 + y ** 2
+def func(x, y):
+    return np.where(np.abs(x) > 0.0155, y - np.sin(6 * math.pi * x) / (6 * math.pi * x), np.nan)
 
-def arc1(x, y):
-    theta = np.arctan2(y, x)
-    return np.where((theta >= 0) & (theta <= 2), x ** 2 + y ** 2, np.nan)
-
-def arc2(x, y):
-    theta = np.arctan2(y, x)
-    return np.where((theta >= -2) & (theta <= 0), x ** 2 + y ** 2, np.nan)
-
-def rad1(x, y):
-    return np.where((x <= 0) & (x >= np.cos(2)), np.tan(2) * x - y, np.nan)
-
-def rad2(x, y):
-    return np.where((x <= 1) & (x >= 0), y, np.nan)
-
-def rad3(x, y):
-    return np.where((x <= 0) & (x >= np.cos(-2)), np.tan(-2) * x - y, np.nan)
-color_pool = ["blue", "olive", "pink", "blue", "blue", "blue", "blue", "hotpink"]
+color_pool = ["blue", "olive", "blue", "blue", "lime", "slategrey", "hotpink"]
 
 def plot_implicit_functions(functions, title, contours, labels, x_interval, y_interval, graph_name, font_size, delicacy=int(1e3)):
     colors = color_pool[:len(contours)]
@@ -52,6 +36,12 @@ def plot_implicit_functions(functions, title, contours, labels, x_interval, y_in
     plt.axhline(0, color='black', linewidth=1)
     plt.axvline(0, color='black', linewidth=1)
 
+    plt.xlabel('$x$-axis', fontsize=font_size)
+    plt.ylabel('$y$-axis', fontsize=font_size)
+    plt.xticks(fontsize=font_size)
+    plt.yticks(fontsize=font_size)
+    plt.title(title, fontsize=font_size)
+
     # Draw arrows on the axes
     plt.annotate('', xy=(x_interval[1], 0), xytext=(x_interval[0], 0),
                  arrowprops=dict(arrowstyle="->", color='black'))
@@ -63,30 +53,16 @@ def plot_implicit_functions(functions, title, contours, labels, x_interval, y_in
         plt.contour(X, Y, Z, levels=[contour], colors=color)
         plt.plot([], [], color=color, label=label)
     
-    circle = plt.Circle((1, 0), 0.03, color="blue", fill=True)  # Adjust the radius and color as needed
+    circle = plt.Circle((0, 1), 0.02, color="blue", fill=False)  # Adjust the radius and color as needed
     plt.gca().add_patch(circle)
-    plt.text(1.15, 0.05, '$A$', horizontalalignment='center', fontsize=font_size)  # Adjust position and label as needed
-
-    circle = plt.Circle((math.cos(2), math.sin(2)), 0.03, color="blue", fill=True)  # Adjust the radius and color as needed
+    circle = plt.Circle((0, 1), 0.018, color="white", fill=True)  # Adjust the radius and color as needed
     plt.gca().add_patch(circle)
-    plt.text(math.cos(2) + 0.05, math.sin(2) + 0.1, '$P$', horizontalalignment='center', fontsize=font_size)  # Adjust position and label as needed
-
-    circle = plt.Circle((math.cos(-2), math.sin(-2)), 0.03, color="blue", fill=True)  # Adjust the radius and color as needed
+    circle = plt.Circle((0, 0), 0.02, color="blue", fill=True)  # Adjust the radius and color as needed
     plt.gca().add_patch(circle)
-    plt.text(math.cos(-2) - 0.05, math.sin(-2) - 0.15, '$P\'$', horizontalalignment='center', fontsize=font_size)  # Adjust position and label as needed
 
-
-    plt.text(0.2, 0.2, '$\\theta$', horizontalalignment='center', fontsize=font_size)  # Adjust position and label as needed
-    plt.text(0.2, -0.2, '$\\theta$', horizontalalignment='center', fontsize=font_size)  # Adjust position and label as needed
-
-    plt.xlabel('$x$-axis', fontsize=font_size)
-    plt.ylabel('$y$-axis', fontsize=font_size)
-    plt.xticks(fontsize=font_size)
-    plt.yticks(fontsize=font_size)
-    plt.title(title, fontsize=font_size)
     plt.grid(True)
     # plt.legend(fontsize=font_size)
     plt.savefig(f"{graph_name}.png", transparent=True)
 
 
-plot_implicit_functions([circ, arc1, arc2, rad1, rad2, rad3], "", [1, 0.04, 0.03, 0, 0, 0], ["", "", "", "", "", ""], (-1.25, 1.25), (-1.25, 1.25), "unit_circle_2", 16)
+plot_implicit_functions([func], "", [0], [""], (-0.5, 0.5), (-0.25, 1.25), "defined_or_not_3", 24)
