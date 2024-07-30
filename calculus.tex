@@ -3,13 +3,13 @@
 
 \linespread{2}
 \setlength{\textwidth}{6.9in}
-\setlength{\textheight}{8.5in}
+\setlength{\textheight}{8.7in}
 \setlength{\oddsidemargin}{-0.2in}
 \setlength{\evensidemargin}{-0.2in}
-\setlength{\topmargin}{-0.1in}
+\setlength{\topmargin}{-0.15in}
 \setlength{\headheight}{0.1in}
-\setlength{\headsep}{0.4in}
-\setlength{\footskip}{0.4in}
+\setlength{\headsep}{0.35in}
+\setlength{\footskip}{0.3in}
 \setlength{\delimitershortfall}{13.5pt}
 \delimiterfactor=100
 
@@ -280,13 +280,13 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
-\newpage
 
-\phantomsection
-\addcontentsline{toc}{chapter}{Preface}
-\chapter*{Preface}
+% \newpage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{Preface}
+% \chapter*{Preface}
 
-This book is summarized by Yung-Hsuan Chang refering to \emph{Calculus: One and Several Variables}, 10th edition and \emph{Calculus: Early Treanscendentals}, 9th edition.
+% This book is summarized by Yung-Hsuan Chang refering to \emph{Calculus: One and Several Variables}, 10th edition and \emph{Calculus: Early Treanscendentals}, 9th edition.
 
 \newpage
 \pagenumbering{arabic}
@@ -366,7 +366,7 @@ We start to learn counting from the set of all natural numbers (positive integer
 In the real number system, we have the so-called order properties. 
 
 \begin{theorem}[Order in the Real Number System]
-    Let $a, b, c\in\bbR$. The following statements always hold.
+    Let $a, b, c\in\bbR$. The following statements hold.
     \begin{enumerate}
         \item (\textit{Trichotomy}) Either $a<b$, $a>b$, or $a=b$.
         \item (\textit{Transitivity}) If $a<b$ and $b<c$, then $a<c$.
@@ -399,7 +399,7 @@ Let $a\in\bbR$. The symbol $|a|$ is called ``the absolute value of $a$,'' and is
 We have some properties regarding the absolute values. 
 
 \begin{theorem}
-    Let $a, b\in\bbR$. The following statements always hold.
+    Let $a, b\in\bbR$. The following statements hold.
     \begin{enumerate}
         \item $|a|=0$ if and only if $a=0$.
         \item $|-a|=|a|$.
@@ -456,7 +456,7 @@ We use a small number on the top-right of another number to indicate the ``power
 We have some special formulas for products and quotients of powers.
 
 \begin{theorem}[Laws of Exponents]
-    Let $a>0$ and $p, q\in\mathbb R$. The following always hold.
+    Let $a>0$ and $p, q\in\mathbb R$. The following hold.
     \begin{enumerate}
         \item $a^{p+q}=a^p+a^q$.
         \item $a^{p-q}=\dfrac{a^p}{a^q}$.
@@ -478,7 +478,7 @@ which coincides the definition. \qed
 Furthermore, we can combine products with summations, factorizing an expression, so that we can find a root more easily.
 
 \begin{theorem}[Factorization]
-    Let $a, b\in\bbR$. The following always hold.
+    Let $a, b\in\bbR$. The following hold.
     \begin{enumerate}
         \item $(a+b)^2=a^2+2ab+b^2$.
         \item $(a-b)^2=a^2-2ab+b^2$.
@@ -538,12 +538,14 @@ Factorization is crucial for solving inequalities and finding roots.
     \begin{enumerate}
         \item How many points are there is with unit length $4$ to the origin?
         \item Evaluate the following expressions.
-        \begin{enumerate}[label=\alph*.]
-            \item $|-5|-|8|$.
-            \item $|-3-7|$.
-            \item $|5-\sqrt{5}|$.
-            \item $|2-\pi|$.
-        \end{enumerate}
+        \begin{multicols}{4}
+            \begin{enumerate}[label=\alph*.]
+                \item $|-5|-|8|$.
+                \item $|-3-7|$.
+                \item $|5-\sqrt{5}|$.
+                \item $|2-\pi|$.
+            \end{enumerate}
+        \end{multicols}
         \item Does the equation $\sqrt{a^2}=a$ hold for all $a\in\bbR$?
         \item Suppose moving $6$ meters to the right of the origin can be denoted as $+2$. How can moving $15$ meters to the left of the origin be denoted?
         \item There are three points $A$, $B$, and $C$ on the number line, with coordinate $1$, $6$, and $8$, respectively. Suppose one set the origin to $B$ without changing the unit length. What is the coordinate of $A$? What is the coordinate of $C$?
@@ -577,22 +579,27 @@ Factorization is crucial for solving inequalities and finding roots.
         \item If $a\cdot567^3=10^3$ and $\dfrac{a}{10^3}=b$, what is the value of $a\cdot b$?
     \end{enumerate}
     \item Factorize the following expressions.
-    \begin{enumerate}
-        \item $x(b-c)-y(c-b)$.
-        \item $(x-a)(x+3)+(3-x)(x-b)$.
-        \item $(x^2+6x)^2-9^2$.
-        \item $(x^2+3x)^-(x+4)^2$.
-        \item $x^2+4x+4-y^2$
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $x(b-c)-y(c-b)$.
+            \item $(x-a)(x-3)+(3-x)(x-b)$.
+            \item $(x^2+6x)^2-9^2$.
+            \item $(x^2+3x)^2-(x+4)^2$.
+            \item $x^2+4x+4-y^2$.
+            \item $9x^2+6x+1$.
+        \end{enumerate}
+    \end{multicols}
     \item Find the real roots of the equation.
-    \begin{enumerate}
-        \item $x^2-x-2=0$.
-        \item $x^2-9=0$.
-        \item $x^2-6x+9=0$.
-        \item $x^2+8x+16=0$.
-        \item $x^2-2x+5=0$.
-        \item $(x-3)^2-16=0$.
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $x^2-x-2=0$.
+            \item $x^2-9=0$.
+            \item $x^2-6x+9=0$.
+            \item $x^2+8x+16=0$.
+            \item $x^2-2x+5=0$.
+            \item $(x-3)^2-16=0$.
+        \end{enumerate}
+    \end{multicols}
 \end{enumerate}
 
 \section{Inequalities}
@@ -617,32 +624,37 @@ For the first scenario, $(3, \infty)$ is the set of solutions. For the second sc
     Solve the inequality $$|x+2|<3.$$
 \end{example}
 \textbf{Solution}. Using the geometric meaning of the absolute value, the set of solutions is the set containing points with distance less than $3$ to point $-2$. Hence, the set of solutions is $(-5, 1)$. \qed\\
-\textbf{Alternative Solution}. We can write $$|x+2|<3$$ as $$-3<x+2<3.$$ Adding $-2$ to each expression of the inequalities, we have $$-5<x<1.$$ \qed
+\textbf{Alternative Solution}. We can write $|x+2|<3$ as $-3<x+2<3.$ Adding $-2$ to each expression of the inequalities, we have $-5<x<1.$\qed
 
 \begin{theorem}[Triangle inquality]
     Let $a, b\in\bbR$. The inequality $$|a+b|\leq |a|+|b|$$ must hold.
 \end{theorem}
-\textbf{Proof}. We have the natural equality $2ab\leq2|ab|$. Adding $a^2+b^2$ to both sides, we have $$a^2+2ab+b^2\leq |a|^2+2|a||b|+|b|^2.$$ Since both sides are non-negative, taking square roots yeilds $$|a+b|\leq |a|+|b|.$$ \qed
+\textbf{Proof}. We have the natural equality $2ab\leq2|ab|$. Adding $a^2+b^2$ to both sides, we have $$a^2+2ab+b^2\leq |a|^2+2|a||b|+|b|^2.$$ Since both sides are non-negative, taking square roots yeilds $|a+b|\leq |a|+|b|.$ \qed
 
 \subsection*{Exercise}
 \begin{enumerate}[label=\arabic*.]
     \item Solve the following inqualities. Afterwards, express the solution set as an interval or as the union of intervals and mark the solution set on a number line.
-    \begin{enumerate}
-        \item $2+3x<5$.
-        \item $16x+64\leq16$.
-        \item $7x(x-4)^2<0$.
-        \item $|x|<2$.
-        \item $0<|x|<1$.
-        \item $|3x+1|>5$.
-    \end{enumerate}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $2+3x<5$.
+            \item $16x+64\leq16$.
+            \item $7x(x-4)^2<0$.
+            \item $|x|<2$.
+            \item $0<|x|<1$.
+            \item $|3x+1|>5$.
+        \end{enumerate}
+    \end{multicols}
     \item Each of the following sets is the solution of an inequality of the form $|x-c|<\delta$. Find $c$ and $\delta$.
-    \begin{enumerate}
-        \item $(-3, 3)$.
-        \item $(-3, 7)$.
-        \item $(-7, 3)$
-        \item $(0, 4)$.
-        \item $(a, b)$.
-    \end{enumerate}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $(-3, 3)$.
+            \item $(-3, 7)$.
+            \item $(-7, 3)$
+            \item $(0, 4)$.
+            \item $(0, b)$.
+            \item $(a, b)$.
+        \end{enumerate}
+    \end{multicols}
     \item Given that $x>1$, arrange the following in order: $$1, x, \sqrt{x}, \dfrac{1}{x}, \dfrac{1}{\sqrt{x}}.$$
     \item Given that $0<x<1$, arrange the following in order: $$1, x, \sqrt{x}, \dfrac{1}{x}, \dfrac{1}{\sqrt{x}}.$$
 \end{enumerate}
@@ -690,44 +702,60 @@ Functions in both genres are all called ``symmetric'' since an even function is 
 
 \begin{enumerate}[label=\arabic*.]
     \item Calculate $f(0), f(1), f(-1)$ with the following functions.
-    \begin{enumerate}
-        \item $f(x)=|x|$.
-        \item $f(x)=2x^2-3x+2$.
-        \item $f(x)=\dfrac{2x-1}{x^2+4}$.
-        \item $f(x)=\sqrt{x^2+2x+5}$.
-        \item $f(x)=|x+3|-5x$.
-    \end{enumerate}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $f(x)=|x|$.
+            \item $f(x)=x^3$.
+            \item $f(x)=2x^2-3x+2$.
+            \item $f(x)=\dfrac{2x-1}{x^2+4}$.
+            \item $f(x)=\sqrt{x^2+2x+5}$.
+            \item $f(x)=|x+3|-5x$.
+        \end{enumerate}
+    \end{multicols}
     \item Calculate $f(a), f(-a), f(a+h), \dfrac{f(a+h)-f(a)}{h}$ with the following functions.
-    \begin{enumerate}
-        \item $f(x)=x^2-2x$.
-        \item $f(x)=2x^2-3x$.
-        \item $f(x)=\dfrac{1}{x-2}$.
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $f(x)=3x+2$.
+            \item $f(x)=x^2-2x$.
+            \item $f(x)=2x^2-3x$.
+            \item $f(x)=\dfrac{1}{x-2}$.
+        \end{enumerate}
+    \end{multicols}
     \item Give the domain and range of the function.
-    \begin{enumerate}
-        \item $f(x)=|x|$.
-        \item $f(x)=\dfrac{1}{x^2}$.
-        \item $f(x)=\sqrt{x-3}$.
-        \item $f(x)=\dfrac{1}{\sqrt{2-x}}$.
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $f(x)=|x|$.
+            \item $f(x)=\dfrac{1}{x^2}$.
+            \item $f(x)=\sqrt{x-3}$.
+            \item $f(x)=\dfrac{1}{\sqrt{2-x}}$.
+        \end{enumerate}
+    \end{multicols}
     \item Give the domain and range of the function and sketch the graph of the function.
-    \begin{enumerate}
-        \item $f(x)=1$.
-        \item $f(x)=-1$.
-        \item $f(x)=2x$.
-        \item $f(x)=2x+1$.
-        \item $f(x)=|x-1|$.
-        \item $f(x)=\left\{\begin{array}{rl}
-            -1,\quad&\text{if $x<0$,}\\1,\quad&\text{if $x>0$}.
-        \end{array}\right.$
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $f(x)=1$.
+            \item $f(x)=-1$.
+            \item $f(x)=x$
+            \item $f(x)=2x$.
+            \item $f(x)=2x+1$.
+            \item $f(x)=2x-1$.
+            \item $f(x)=|x|$.
+            \item $f(x)=|x-1|$.
+            \item $f(x)=|x+1|$.
+            \item $f(x)=\left\{\begin{array}{rl}
+                -1,\quad&\text{if $x<0$,}\\1,\quad&\text{if $x>0$}.
+            \end{array}\right.$
+        \end{enumerate}
+    \end{multicols}
     \item Determin whether the following functions are even, odd, or neither.
-    \begin{enumerate}
-        \item $f(x)=x^2+1$.
-        \item $f(x)=\dfrac{x^2}{1-|x|}$.
-        \item $f(x)=x+\dfrac{1}{x}$.
-        \item $f(x)=\sqrt[5]{x-x^3}$.
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $f(x)=x^2+1$.
+            \item $f(x)=\dfrac{x^2}{1-|x|}$.
+            \item $f(x)=x+\dfrac{1}{x}$.
+            \item $f(x)=\sqrt[5]{x-x^3}$.
+        \end{enumerate}
+    \end{multicols}
 \end{enumerate}
 
 \section{Elementary Functions}
@@ -775,6 +803,10 @@ The functions that figure most prominently in single-variable calculus are the p
 
 A rational function will have a vertical asymptote at $x=a$ such that $P_2(a)=0$. For example, the function $f(x)=\dfrac{1}{x}$ has a vertical asymptote at $x=0$. See Figure 1.4.1.
 
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{reciprocal_of_x.png}\figtag{1.4.1}
+\end{center}
+
 \begin{example}
     Find vertical asymptotes of the following functions.
     \begin{enumerate}
@@ -783,10 +815,6 @@ A rational function will have a vertical asymptote at $x=a$ such that $P_2(a)=0$
     \end{enumerate}
 \end{example}
 \textbf{Solution}. For function $f_1$, since $x^2+4x+4=(x+2)^2$, the vertical asymptote is $x=-2$. For function $f_2$, since $x^2-1=(x+1)(x-1)$, the vertical asymptotes are $x=1$ and $x=-1$. \qed
-
-\begin{center}
-    \includegraphics[width=0.5\textwidth]{reciprocal_of_x.png}\figtag{1.4.1}
-\end{center}
 
 \subsection*{Trigonometric Functions}
 
@@ -847,7 +875,7 @@ We have four more trigonometric functions: the tangent, the cotangent, the secan
 \subsubsection*{Identities}
 
 \begin{theorem}[Trigonometric Identity]
-    Let $\theta, \alpha, \beta\in\bbR$. The following always hold.
+    Let $\theta, \alpha, \beta\in\bbR$. The following hold.
     \begin{enumerate}
         \item $(\sin\theta)^2+(\cos\theta)^2=1, \qquad (\tan\theta)^2+1=(\sec\theta)^2,\qquad 1+(\cot\theta)^2=(\csc\theta)^2$.
         \item $\sin(\theta+2\pi)=\sin\theta,\qquad\cos(\theta+2\pi)=\cos\theta,\qquad\tan(\theta+\pi)=\tan\theta$.
@@ -874,30 +902,43 @@ We have four more trigonometric functions: the tangent, the cotangent, the secan
 
 \begin{enumerate}[label=\arabic*.]
     \item State whether the function is a polynomial function, a rational function, or neither. If it is a polynomial function, give the degree.
-    \begin{enumerate}
-        \item $f(x)=3$.
-        \item $f(x)=-x^{-1}$.
-        \item $f(x)=\dfrac{x^2-4}{\sqrt{2}}$.
-        \item $f(x)=\dfrac{x^2-2x-8}{x+2}$.
-        \item $f(x)=\dfrac{(\sqrt{x}+2)(\sqrt{x}-2)}{x^2+4}$.
-        \item $f(x)=\dfrac{1}{x^2-4}$.
-        \item $f(x)=x+\dfrac{1}{x}$.
-    \end{enumerate}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $f(x)=3$.
+            \item $f(x)=x^2+x-\dfrac{1}{6}$
+            \item $f(x)=-x^{-1}$.
+            \item $f(x)=\dfrac{x^2-4}{\sqrt{2}}$.
+            \item $f(x)=\dfrac{x^2-2x-8}{x+2}$.
+            \item $f(x)=\dfrac{(\sqrt{x}+2)(\sqrt{x}-2)}{x^2+4}$.
+            \item $f(x)=\dfrac{1}{x^2-4}$.
+            \item $f(x)=x+\dfrac{1}{x}$.
+        \end{enumerate}
+    \end{multicols}
     \item Convert the degree measure into radian measure.
-    \begin{enumerate}
-        \item $225^\circ$.
-        \item $-210^\circ$.
-        \item $450^\circ$.
-        \item $1^\circ$.
-    \end{enumerate}
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $225^\circ$.
+            \item $-210^\circ$.
+            \item $450^\circ$.
+            \item $1^\circ$.
+        \end{enumerate}
+    \end{multicols}
     \item Convert the radian measure into degree measure.
-    \begin{enumerate}
-        \item $-3\pi/2$.
-        \item $5\pi/4$.
-        \item $2$.
-        \item $-\sqrt{3}$.
-    \end{enumerate}
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $-3\pi/2$.
+            \item $5\pi/4$.
+            \item $2$.
+            \item $-\sqrt{3}$.
+        \end{enumerate}
+    \end{multicols}
     \item Compute $\sin\theta$ and $\cos\theta$ with $\theta=0, \dfrac{\pi}{6}, \dfrac{\pi}{4}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{2\pi}{3}, \dfrac{3\pi}{4}, \pi.$
+    \item Given the fact that $\log_{10}a=3$, what is the value of $a$?
+    \item Given the fact that $\log_{2}b=10$, what is the value of $b$?
+    \item Given the fact that $a=10^{3.5}$, what is the value of $\log_{10}a$?
+    \item Given the fact that $b=2^{24}$, what is the value of $\log_{2}b$?
+    \item Given the fact that $c=2^{128}$, what is the value of $\log_{4}b$?
+    \item Given the fact that $d=2^{256}$, what is the value of $\log_{16}b$?
     
 \end{enumerate}
 
@@ -942,18 +983,23 @@ Note that the domain and range will change after composition.
 
 \begin{enumerate}[label=\arabic*.]
     \item Let $f(x)=x+\dfrac{1}{\sqrt{x}}$ and $g(x)=-\sqrt{x}$. Find the following function.
-    \begin{enumerate}
-        \item $2f$.
-        \item $6f$.
-        \item $3g$.
-        \item $6f+3g$.
-        \item $f-g$.
-        \item $fg$.
-    \end{enumerate}
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $2f$.
+            \item $2g$.
+            \item $6f$.
+            \item $3g$.
+            \item $6f+3g$.
+            \item $f-g$.
+            \item $fg$.
+            \item $\dfrac{f}{g}$.
+        \end{enumerate}
+    \end{multicols}
     \item Suppose $f$ and $g$ are odd. What can you conclude about $fg$?
     \item Suppose $f$ and $g$ are even. What can you conclude about $fg$?
     \item Given a function $f:\bbR\to\bbR$. Show that the function $g(x)=f(x)+f(-x)$ is even.
-    \item Given a function $f:\bbR\to\bbR$. Show that the function $h(x)=f(x)-f(-x)$ is even.
+    \item Given a function $f:\bbR\to\bbR$. Show that the function $h(x)=f(x)-f(-x)$ is odd.
+    \item Show that every function $f$ can be decomposed into an odd function $o$ and an even function $e$. That is, for every function $f$, we have $f=o+e$, where $o$ is odd and $e$ is even.
     \item Find $f$ such that $f\circ g=F$ for the following functions.
     \begin{enumerate}
         \item $g(x)=\dfrac{1+x^2}{1+x^4}, \quad F(x)=\dfrac{1+x^4}{1+x^2}$.
@@ -976,6 +1022,7 @@ Note that the domain and range will change after composition.
         \item $f(x)=x^3+1, \quad g(x)=\sqrt[3]{x-1}$.
     \end{enumerate}
     \item Find $f\circ g\circ h$ if $f(x)=\dfrac{1}{x}, g(x)=x^2+1, h(x)=\cos x$.
+    \item Suppose $f, g, h$ are functions. Is $(f\circ g)\circ h$ always equal to $f\circ(g\circ h)$?
 \end{enumerate}
 
 \setlength{\delimitershortfall}{13.5pt}
@@ -1020,13 +1067,9 @@ The first case is that the value of the function equals the limit $f(0)=1$. The 
 One can make $x$ approach $c$ either from the right side or from the left side. Sometimes, a function cannot have a limit with approaches from both sides. The ``one-sided limits'' may exist. We write $$\lim_{x\to c^-}f(x)=L$$ to indicate that $f(x)$ approaches $L$ when $x$ approaches $c$ from the left, and we write $$\lim_{x\to c^+}f(x)=L$$ to indicate that $f(x)$ approaches $L$ when $x$ approaches $c$ from the right.
 
 \begin{example}
-    Find the left-hand-side limit $\displaystyle\lim_{x\to 3^-}f(x)$ and the right-hand-side limit $\displaystyle\lim_{x\to 3^+}f(x)$ in Figure 2.1.2. Note that $f$ is not defined at $x=3$.
+    Find the left-hand-side limit $\displaystyle\lim_{x\to 2^-}f(x)$ and the right-hand-side limit $\displaystyle\lim_{x\to 2^+}f(x)$ in Figure 2.1.2. Note that $f$ is not defined at $x=2$.
 \end{example}
-\textbf{Solution}. From the figure, we have $\displaystyle\lim_{x\to 3^-}f(x)=2$ and $\displaystyle\lim_{x\to 3^+}f(x)=4$. \qed
-
-\begin{center}
-    \includegraphics[width=0.7\textwidth/3]{two-side_limits.JPG}\figtag{2.1.2}
-\end{center}
+\textbf{Solution}. From the figure, we have $\displaystyle\lim_{x\to 2^-}f(x)=1$ and $\displaystyle\lim_{x\to 2^+}f(x)=-1$. \qed
 
 For a limit to exist, both the left-hand-side limit and the right-hand-side limit must exist and equal.
 
@@ -1034,6 +1077,10 @@ For a limit to exist, both the left-hand-side limit and the right-hand-side limi
     Let $f(x)=\dfrac{x}{|x|}$ defined on $(-\infty, 0)\cup(0, \infty)$. Note that $f(x)=1$ for $x>0$ and $f(x)=-1$ for $x<0$. Find the two one-sided limits of $f$ at $x=0$ and show that the limit of $f$ at $x=0$ does not exist.
 \end{example}
 \textbf{Solution}. Since $f(x)=1$ for $x>0$, we easily have $\displaystyle\lim_{x\to 0^+}f(x)=1$ regardless of the fact that $f$ is not defined at $x=0$. Similarly, $\displaystyle\lim_{x\to 0^-}f(x)=-1$. Since the left-hand-side limit and the right-hand-side limit are not equal, the limit does not exist. \qed
+
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{jumpy.png}\figtag{2.1.2}
+\end{center}
 
 \begin{remark}
     For a limit to exist, it must be finite. Otherwise, we say the limit does not exist. However, if a limit does not exist, it might be either oscillating or unbounded (infinite).
@@ -1043,17 +1090,9 @@ For a limit to exist, both the left-hand-side limit and the right-hand-side limi
     In Figure 2.1.3, the limits $\displaystyle\lim_{x\to 3} f(x)$ and $\displaystyle\lim_{x\to 9} f(x)$ do not exist since the function is unbounded near $3$ and $9$.
 \end{example}
 
-\begin{center}
-    \includegraphics[width=0.26\textwidth]{unbounded_limits.JPG}\figtag{2.1.3}
-\end{center}
-
 \begin{example}
     In Figure 2.1.4, the graph of $f(x)=\dfrac{1}{x-2}$ is depicked. As $x$ approaches $4$, $\dfrac{1}{x-2}$ approaches $\dfrac{1}{2}$. Hence, $\displaystyle\lim_{x\to 4}\dfrac{1}{x-2}=\dfrac{1}{2}$. However, as approaches $2$, $\dfrac{1}{x-2}$ gets larger and lager, and $\dfrac{1}{x-2}$ is hence unbounded.
 \end{example}
-
-\begin{center}
-    \includegraphics[width=0.34\textwidth]{limit_reciprocal.JPG}\figtag{2.1.4}
-\end{center}
 
 \begin{example}
     Let $$f(x)=\left\{\begin{array}{rl}
@@ -1062,34 +1101,55 @@ For a limit to exist, both the left-hand-side limit and the right-hand-side limi
 \end{example}
 \textbf{Solution}. For $x<1$, $f(x)=1-x^2$. Thus, $$\lim_{x\to1^-}f(x)=0.$$ For $x>1$, $f(x)=\dfrac{1}{x-1}$. Thus, as $x$ approaches $1$ from the right side, $f(x)$ get larger and larger, and $\dfrac{1}{x-1}$ is hence unbounded. Therefore, $\displaystyle\lim_{x\to 1}f(x)$ does not exist.
 
+\begin{center}
+    \begin{minipage}{0.485\textwidth}
+        \begin{center}
+            \includegraphics[width=0.85\textwidth]{critical.png}\figtag{2.1.3}
+        \end{center}
+    \end{minipage}
+    \begin{minipage}{0.485\textwidth}
+        \begin{center}
+            \includegraphics[width=0.85\textwidth]{limit_reciprocal.png}\figtag{2.1.4}
+        \end{center}
+    \end{minipage}
+\end{center}
+
 \subsection*{Exercise}
 
 \begin{enumerate}[label=\arabic*.]
     \item Find $\displaystyle\lim_{x\to c^-}f(x), \lim_{x\to c^+}f(x), \lim_{x\to c}f(x), f(c)$ with the given graph of $f$ and number $c$.
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $c=2$.\\
+            \includegraphics[width=0.41\textwidth]{limit_ex_1.png}\\
+            \phantom{\ }
+            \item $c=3$.\\
+            \includegraphics[width=0.41\textwidth]{limit_ex_2.png}\\
+            \phantom{\ }
+            \item $c=3$.\\
+            \includegraphics[width=0.41\textwidth]{limit_ex_3.png}
+            \item $c=4$.\\
+            \includegraphics[width=0.41\textwidth]{limit_ex_4.png}
+            \item $c=-2$.\\
+            \includegraphics[width=0.41\textwidth]{limit_ex_5.png}
+            \item $c=1$.\\
+            \includegraphics[width=0.41\textwidth]{limit_ex_6.png}
+        \end{enumerate}
+    \end{multicols}
+    \item Decide on intuitive grounds whether the indicated limit exists. Evaluate it if it exists.
     \begin{enumerate}
-        \item $c=2$.
-        \item $c=3$.
-        \item $c=3$.
-        \item $c=4$.
-        \item $c=-2$.
-        \item $c=1$.
-        \item $c=1$.
-        \item $c=-1$.
-        \item $c=2$.
-        \item $c=3$.
-    \end{enumerate}
-    \item Decide on intuitive grounds whether the ondicated limit exists. Evaluate it if it exists.
-    \begin{enumerate}
-        \item $\displaystyle\lim_{x\to 2}2x-1$.
-        \item $\displaystyle\lim_{x\to-2}x^2-2x+4$.
-        \item $\displaystyle\lim_{x\to 1}2-5x$.
-        \item $\displaystyle\lim_{x\to 0}\dfrac{1}{|x|}$.
-        \item $\displaystyle\lim_{x\to 3}\dfrac{2x-6}{x-3}$.
-        \item $\displaystyle\lim_{x\to 1}x+\dfrac{1}{x}$.
-        \item $\displaystyle\lim_{x\to 1}\dfrac{x^2-1}{x-1}$.
-        \item $\displaystyle\lim_{x\to 1}\dfrac{x^3-1}{x-1}$.
-        \item $\displaystyle\lim_{x\to 1}\dfrac{x^3-1}{x+1}$.
-        \item $\displaystyle\lim_{x\to 1}\dfrac{x^2+1}{x^2-1}$.
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to 2}2x-1$.
+            \item $\displaystyle\lim_{x\to-2}x^2-2x+4$.
+            \item $\displaystyle\lim_{x\to 1}2-5x$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{1}{|x|}$.
+            \item $\displaystyle\lim_{x\to 3}\dfrac{2x-6}{x-3}$.
+            \item $\displaystyle\lim_{x\to 1}x+\dfrac{1}{x}$.
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x^2-1}{x-1}$.
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x^3-1}{x-1}$.
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x^3-1}{x+1}$.
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x^2+1}{x^2-1}$.
+        \end{multicols}
         \item $\displaystyle\lim_{x\to 0}f(x)$ with $f(x)=\left\{\begin{array}{rl}
             1, \quad & \text{if $x\ne0$},\\
             3, \quad & \text{if $x=0$}.
@@ -1127,17 +1187,399 @@ For a limit to exist, both the left-hand-side limit and the right-hand-side limi
 
 \section{Definition of Limit}
 
+Just as previously stated, the limit cares about the behavior of the function $f$ near a point $c$. We say the limit of $f$ at $c$ is $L$ if the value of the function $f(x)$ gets closer to $L$ as $x$ approaches $c$. More generally speaking, we say the limit of $f$ at $c$ is $L$ if the difference between $f(x)$ and $L$ can be assured to be arbitrarily small as $x$ and $c$ are closed enough.
 
+The difference between $f(x)$ and $L$ can be described in mathematical language: $|f(x)-L|$. We want the error of function to be arbitrarily small, say we want the error to be less than $\varepsilon$. We just easily have the inequality $|f(x)-L|<\varepsilon$.
+
+Let's say number $a$ and number $b$ are closed enough if their distance is less than $\delta$. Now, we can use interval to show that $x$ and $c$ are closed enough: $x\in(c-\delta, c)\cup(c, c+\delta)$. This is almost our definition of the limit.
+
+\begin{definition}[Limit]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $L\in\bbR$ and $c\in A$. We say the \underline{limit} of $f$ at $c$ is $L$ if for all $\varepsilon>0$, there exists a $\delta>0$ such that $0<|x-c|<\delta$ implies $|f(x)-L|<\varepsilon$. In this case, we write $\displaystyle\lim_{x\to c}f(x)=L$.
+\end{definition}
+
+\begin{remark}
+    Usually, the choice of $\delta$ depends on $\varepsilon$. The definition does not require a unique difference $\delta$ to work for all error $\varepsilon$, which is quite impossible. Since the error $\varepsilon$ is given before the choice of $\delta$, if we know that a number $\delta_0$ will work as a $\delta$, then any positive number less than $\delta_0$ will work as the interval is smaller.
+\end{remark}
+
+\begin{example}
+    Show that $$\lim_{x\to 1}2x+1=3.$$
+\end{example}
+\textit{Sketch of the proof}. We need to find a $\delta$ with connection to $\varepsilon$ such that $|x-1|<\delta$ implies $|2x+1-3|<\varepsilon$. Observe that $|2x+1-3|=2|x-1|$. Now, the question becomes easier, and we just need to select a $\delta$ with the following two inequalities: 
+\begin{equation*}
+    |x-1|<\delta, \qquad\text{and}\qquad 2|x-1|<\varepsilon.
+\end{equation*}
+A natural choice is $\delta=\dfrac{\varepsilon}{2}$. However, just like previously stated, any number less than $\dfrac{\varepsilon}{2}$ will work, such as $\dfrac{\varepsilon}{3}, \dfrac{\varepsilon}{4}$.\\
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta=\dfrac{\varepsilon}{2}$. Then, $0<|x-1|<\delta=\dfrac{\varepsilon}{2}$ implies $|2x+1-3|=2|x-1|<2\cdot\dfrac{\varepsilon}{2}=\varepsilon$. \qed
+
+The proof itself is quite straightforward, but the work beforehand is the essence of the definition.
+
+\begin{example}
+    Show that $$\lim_{x\to -1}2-3x=5.$$
+\end{example}
+\textit{Sketch of the proof}. We need to find a $\delta$ with connection to $\varepsilon$ such that $|x-(-1)|<\delta$ implies $|2-3x-5|<\varepsilon$. Observe that $|2-3x-5|=3|x+1|$. Now, the question becomes easier, and we just need to select a $\delta$ with the following two inequalities: 
+\begin{equation*}
+    |x+1|<\delta, \qquad\text{and}\qquad 3|x+1|<\varepsilon.
+\end{equation*}
+A natural choice is $\delta=\dfrac{\varepsilon}{3}$. However, just like previously stated, any number less than $\dfrac{\varepsilon}{3}$ will work.\\
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta=\dfrac{\varepsilon}{3}$. Then, $0<|x+1|<\delta=\dfrac{\varepsilon}{3}$ implies $|2-3x-5|=3|x+1|<3\cdot\dfrac{\varepsilon}{3}=\varepsilon$. \qed
+
+\begin{proposition}
+    Let $c\in\bbR$. Then, $$\lim_{x\to c}x=c.$$
+\end{proposition}
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta=\varepsilon$. Then, $0<|x-c|<\delta=\varepsilon$ implies $|x-c|<\varepsilon$. \qed
+
+\begin{proposition}
+    Let $c\in\bbR$ and $r\in\bbR$. Then, $$\lim_{x\to c}r=r.$$
+\end{proposition}
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta$ to be an arbitrary positive number. Then, $|r-r|=0<\varepsilon$. \qed
+
+\begin{proposition}
+    Let $c\in\bbR$. Then, $$\lim_{x\to c}|x|=|c|.$$
+\end{proposition}
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta=\varepsilon$. Then, $0<|x-c|<\delta=\varepsilon$ implies $||x|-|c||\leq|x-c|<\varepsilon$. \qed
+
+In fact, we can prove the limit and the value of the function is the same for every polynomial. We now prove the case when the degree is $1$.
+
+\begin{proposition}
+    Let $a\ne 0$ and $b\in\bbR$. Let $c\in\bbR$. Then, $$\lim_{x\to c}ax+b=ac+b.$$
+\end{proposition}
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta=\dfrac{\varepsilon}{|a|}$. Then, $0<|x-c|<\delta=\dfrac{\varepsilon}{|a|}$ implies $|ax+b-ac+b|=|a||x-c|<|a|\cdot\dfrac{\varepsilon}{|a|}=\varepsilon$. \qed
+
+\begin{proposition}
+    Let $c\in\bbR$. Then, $$\lim_{x\to c}x^2=c^2.$$
+\end{proposition}
+\textit{Sketch of the proof}. We need to find a $\delta$ with connection to $\varepsilon$ such that $|x-c|<\delta$ implies $|x^2-c^2|<\varepsilon$. Observe that $|x^2-c^2|=|x+c||x-c|$. We need to eliminate the term $|x+c|$ to get an easier relation. Since we want $x$ to approach $c$, we may first set $|x-c|<1$. We choose $1$ since it is a number that we are familiar with. One can choose any other positive number. Now, we can estimate the range of $|x+c|$ when $|x-c|<1$. If $|x-c|<1$, it means that $x\in(c-1, c+1)$. Hence, the range of $|x+c|$ is $(2c-1, 2c+1)$. Hence, we know that $|x+c|<\max\{2c-1, 2c+1\}\leq 2|c|+1$. We now just need to select a $\delta$ with the following two inequalities: 
+\begin{equation*}
+    |x-c|<\delta, \qquad\text{and}\qquad |x+c||x-c|<(2|c|+1)|x-c|<\varepsilon.
+\end{equation*}
+A natural choice is $\delta=\dfrac{\varepsilon}{2|c|+1}$. One has to remember that we set $|x-c|<1$. So we need to choose $\delta$ that is less than $1$.\\\setlength{\delimitershortfall}{0pt}
+\textbf{Proof}. Let $\varepsilon>0$. Choose $\delta=\min\left\{1, \dfrac{\varepsilon}{2|c|+1}\right\}$. Then, $0<|x-c|<\delta=$ implies \begin{align*}
+    |x^2-c^2|&=|x+c||x-c|\\
+    &<(2|c|+1)\cdot\min\left\{1, \dfrac{\varepsilon}{2|c|+1}\right\}\\
+    &\leq\varepsilon.
+\end{align*} \qed
+
+\setlength{\delimitershortfall}{13.5pt}
+
+\begin{theorem}
+    The following are equivalent.
+    \vspace{-1.2em}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $\displaystyle\lim_{x\to c}f(x)=L$.
+            \item $\displaystyle\lim_{h\to 0}f(x+h)=L$.
+            \item $\displaystyle\lim_{x\to c}f(x)-L=0$.
+            \item $\displaystyle\lim_{x\to c}|f(x)-L|=0$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.01em}
+\end{theorem}
+
+We can use the same language to construct the two one-sided limits, and state that the limit exists if and only if the two one-sided limits exist and are equal. Note that the two $\delta$'s might not be equal if you are only given that two one-sided limits exists and are equal.
+
+\begin{definition}[Left-Hand-Side Limit]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $L\in\bbR$ and $c\in A$. We say the \underline{left-hand-side limit} of $f$ at $c$ is $L$ if for all $\varepsilon>0$, there exists a $\delta>0$ such that $0<c-x<\delta$ implies $|f(x)-L|<\varepsilon$. In this case, we write $\displaystyle\lim_{x\to c^-}f(x)=L$.
+\end{definition}
+
+\begin{definition}[Right-Hand-Side Limit]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $L\in\bbR$ and $c\in A$. We say the \underline{right-hand-side limit} of $f$ at $c$ is $L$ if for all $\varepsilon>0$, there exists a $\delta>0$ such that $0<x-c<\delta$ implies $|f(x)-L|<\varepsilon$. In this case, we write $\displaystyle\lim_{x\to c^+}f(x)=L$.
+\end{definition}
+
+\begin{theorem}
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $L\in\bbR$ and $c\in A$. The limit $\displaystyle\lim_{x\to c}f(x)=L$ if and only if $\displaystyle\lim_{x\to c^-}f(x)=L$ and $\displaystyle\lim_{x\to c^-}f(x)=L$.
+\end{theorem}
+
+\begin{example}
+    Evaluate $\displaystyle\lim_{x\to 1}f(x)$ for function $f$ defined by $$f(x)=\left\{\begin{array}{rl}
+        1+x^2, \quad & \text{if $x<1$},\\
+        3, \quad & \text{if $x=1$},\\
+        4-2x, \quad & \text{if $x>1$}.
+    \end{array}\right.$$
+\end{example}
+\textbf{Solution}. The left-hand-side limit $$\lim_{x\to 1^-}f(x)=\lim_{x\to 1^-}4-2x=2$$ and the right-hand-side limit $$\lim_{x\to 1^+}f(x)=\lim_{x\to 1^+}4-2x=2$$ are equal. Hence, the limit $\displaystyle\lim_{x\to 1}f(x)=2$. \qed
+
+\subsection*{Exercise}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Decide on intuitive grounds whether the indicated limit exists. Evaluate it if it exists.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x}{x+1}$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{x^2(1+x)}{2x}$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{x^2(1+x)}{2x^2}$.
+            \item $\displaystyle\lim_{x\to 4}\dfrac{x}{\sqrt{x}+1}$.
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x^4-1}{x-1}$.
+            \item $\displaystyle\lim_{x\to -2}\dfrac{x}{|x|}$.
+            \item $\displaystyle\lim_{x\to -1}\dfrac{1-x}{x+1}$.
+            \item $\displaystyle\lim_{x\to 3}\dfrac{x-3}{\sqrt{x}-3}$.
+            \item $\displaystyle\lim_{x\to 1^+}\dfrac{\sqrt{x-1}}{x}$.
+            \item $\displaystyle\lim_{x\to 0^+}\dfrac{x}{|x|}$.
+            \item $\displaystyle\lim_{x\to 0^-}\dfrac{x}{|x|}$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{x}{|x|}$.
+        \end{multicols}
+        \item $\displaystyle\lim_{x\to 2^+}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            2x-1, \quad & \text{if $x\leq 2$},\\
+            x^2-x, \quad & \text{if $x>2$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 2}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            x^2, \quad & \text{if $x<3$},\\
+            7, \quad & \text{if $x=3$},\\
+            2x+3, \quad & \text{if $x>3$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 2}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            1, \quad & \text{if $x\in\mathbb{Z}$},\\
+            -1, \quad & \text{if $x\notin\mathbb{Z}$}.
+        \end{array}\right.$
+        \item $\displaystyle\lim_{x\to 0}f(x)$ with $f(x)=\left\{\begin{array}{rl}
+            x^2, \quad & \text{if $x\leq 1$},\\
+            x, \quad & \text{if $x>1$}.
+        \end{array}\right.$
+    \end{enumerate}
+    \item Find the largest $\delta$ that works for the given $\varepsilon$.
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $\displaystyle\lim_{x\to 1}2x=2,\quad \varepsilon=0.1$.
+            \item $\displaystyle\lim_{x\to 4}5x=20,\quad \varepsilon=0.5$.
+            \item $\displaystyle\lim_{x\to2}\dfrac{x}{2}=1,\quad \varepsilon=0.01$.
+            \item $\displaystyle\lim_{x\to2}\dfrac{x}{5}=\dfrac{2}{5},\quad \varepsilon=0.1$.
+        \end{enumerate}
+    \end{multicols}
+\end{enumerate}
 
 \section{Limit Theorems}
 
+We introduce some theorems related to limits here. We will state them and skip the majority of the proof.
 
+\begin{theorem}[Uniqueless of Limit]
+    If $\displaystyle\lim_{x\to c}f(x)=L$ and $\displaystyle\lim_{x\to c}f(x)=M$, then $L=M$. That is, the limit of a function at a point is unique.
+\end{theorem}
+
+\begin{theorem}[Operations of Limits]\label{lim_op}
+    If $\displaystyle\lim_{x\to c}f(x)=L$ and $\displaystyle\lim_{x\to c}g(x)=M$, the following statements hold.
+    \begin{enumerate}
+        \item $\displaystyle\lim_{x\to c}f(x)+g(x)=L+M$.
+        \item $\displaystyle\lim_{x\to c}\alpha\cdot f(x)=\alpha L,\quad \alpha\in\bbR$.
+        \item $\displaystyle\lim_{x\to c}f(x)g(x)=LM$.
+        \item If $M\ne0$, then $\displaystyle\lim_{x\to c}\dfrac{f(x)}{g(x)}=\dfrac{L}{M}$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{corollary}
+    Let $P$ be a polynomial function. Then, the limit of $P$ at any point $c\in\bbR$ is the value of the function.
+\end{corollary}
+
+For the special matter happened in this corollary, we say that this kind of functions is continuous. We will talk about this in the next section.
+
+\begin{theorem}
+    If $\displaystyle\lim_{x\to c}f(x)=L\ne 0$ and $\displaystyle\lim_{x\to c}g(x)=0$, then $\displaystyle\lim_{x\to c}\dfrac{f(x)}{g(x)}$ does not exist.
+\end{theorem}
+\textbf{Proof}. Suppose $\displaystyle\lim_{x\to c}\dfrac{f(x)}{g(x)}=M$. On the one hand, since the two limits exist, \begin{align*}
+    \lim_{x\to c}\dfrac{f(x)}{g(x)}\cdot g(x)&=\lim_{x\to c}\dfrac{f(x)}{g(x)}\cdot\lim_{x\to c}g(x)\\
+    &=M\cdot 0\\
+    &=0.
+\end{align*} On the other hand, \begin{align*}
+    \lim_{x\to c}\dfrac{f(x)}{g(x)}\cdot g(x)&=\lim_{x\to c}f(x)\\
+    &=L\\
+    &\ne=0,
+\end{align*} a contradiction. Hence, $\displaystyle\lim_{x\to c}\dfrac{f(x)}{g(x)}$ does not exist. \qed
+
+\begin{example}
+    Evaluate the following limits.
+    \begin{enumerate}
+        \item $\displaystyle\lim_{x\to 2}\dfrac{1/x-1/2}{x-2}$.
+        \item $\displaystyle\lim_{x\to 9}\dfrac{x-9}{\sqrt{x}-3}$.
+    \end{enumerate}
+\end{example}
+\textbf{Proof}. For the first expression, \begin{align*}
+    \lim_{x\to 2}\dfrac{1/x-1/2}{x-2}&=\lim_{x\to 2}\dfrac{2-x}{2x^2-4x}\\
+    &=\lim_{x\to 2}\dfrac{2-x}{2x(x-2)}\\
+    &=-\lim_{x\to 2}\dfrac{1}{2x}\\
+    &=-\dfrac{1}{4}.
+\end{align*} For the second expression, \begin{align*}
+    \lim_{x\to 9}\dfrac{x-9}{\sqrt{x}-3}&=\lim_{x\to 9}\dfrac{x-9}{\sqrt{x}-3}\cdot\dfrac{\sqrt{x}+3}{\sqrt{x}+3}\\
+    &=\lim_{x\to 9}\dfrac{(x-9)(\sqrt{x}+3)}{|x|-9}\\
+    &=\lim_{x\to 9}\sqrt{x}+3\\
+    &=6.
+\end{align*} \qed
+
+\subsection*{Exercise}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Suppose $\displaystyle\lim_{x\to c}f(x)=4$, $\displaystyle\lim_{x\to c}g(x)=-4$. Evaluate the following limits if one exists. Otherwise, explain the reason that one does not exist.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to c}f(x)+g(x)$.
+            \item $\displaystyle\lim_{x\to c}f(x)-g(x)$.
+            \item $\displaystyle\lim_{x\to c}f(x)g(x)$.
+            \item $\displaystyle\lim_{x\to c}f(x)/g(x)$.
+        \end{multicols}
+    \end{enumerate}
+    \item Suppose $\displaystyle\lim_{x\to c}f(x)=2$, $\displaystyle\lim_{x\to c}g(x)=-1$, and $\displaystyle\lim_{x\to c}h(x)=0$. Evaluate the following limits if one exists. Otherwise, explain the reason that one does not exist.
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\displaystyle\lim_{x\to c}\dfrac{2f(x)+g(x)}{2}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{1}{f(x)+2g(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{f(x)}{g(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{h(x)}{f(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{f(x)}{h(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{1}{f(x)-g(x)}$.
+        \end{multicols}
+    \end{enumerate}
+    \item Suppose $\displaystyle\lim_{x\to c}f(x)=3$, $\displaystyle\lim_{x\to c}g(x)=0$, and $\displaystyle\lim_{x\to c}h(x)=-2$. Evaluate the following limits if one exists. Otherwise, explain the reason that one does not exist.
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $\displaystyle\lim_{x\to c}\dfrac{2f(x)-2h(x)}{g(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{g(x)(h(x))^3}{f(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{f(x)}{x-c}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{g(x)}{h(x)}$.
+            \item $\displaystyle\lim_{x\to c}\dfrac{1}{f(x)-h(x)}$.
+            \item $\displaystyle\lim_{x\to c}(3+g(x))^2$.
+        \end{multicols}
+    \end{enumerate}
+    \item Evaluate the following limits if one exists. Otherwise, explain the reason that one does not exist.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to 2}3$.
+            \item $\displaystyle\lim_{x\to 3}(5-4x)^2$.
+            \item $\displaystyle\lim_{x\to -4}x^2+3x-7$.
+            \item $\displaystyle\lim_{x\to -2}3|x-1|$.
+        \end{multicols}
+    \end{enumerate}
+    \item Evaluate the following limits if one exists. Otherwise, explain the reason that one does not exist.
+    \setlength{\delimitershortfall}{0pt}
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to 0}\dfrac{x^2-1}{x-1}$.
+            \item $\displaystyle\lim_{x\to 3}\dfrac{x^2+x-12}{x-3}$.
+            \item $\displaystyle\lim_{x\to 4}\left(\dfrac{1}{x}-\dfrac{1}{4}\right)\left(\dfrac{1}{x-4}\right)$.
+            \item $\displaystyle\lim_{h\to 0}h\cdot\left(1-\dfrac{1}{h}\right)$.
+            \item $\displaystyle\lim_{x\to 1}\dfrac{x-1}{\sqrt{x}-1}$.
+            \item $\displaystyle\lim_{x\to 4}\dfrac{\sqrt{x}-2}{x-4}$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{\sqrt{x^2-4}}{x-2}$.
+            \item $\displaystyle\lim_{t\to 0}\dfrac{t+a/t}{t+b/t}$.
+            \item $\displaystyle\lim_{h\to 0}h^2\left(1+\dfrac{1}{h}\right)$.
+            \item $\displaystyle\lim_{h\to 0}h\left(1+\dfrac{1}{h^2}\right)$.
+            \item $\displaystyle\lim_{x\to -4}\dfrac{2x}{x+4}+\dfrac{8}{x+4}$.
+            \item $\displaystyle\lim_{x\to -4}\dfrac{2x}{x+4}-\dfrac{8}{x+4}$.
+        \end{multicols}
+    \end{enumerate}
+    \item Evaluate the following limits if one exists. Otherwise, explain the reason that one does not exist.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to 4}\dfrac{1}{x}-\dfrac{1}{4}$.
+            \item $\displaystyle\lim_{x\to 4}\left(\dfrac{1}{x}-\dfrac{1}{4}\right)\left(\dfrac{1}{x-4}\right)$.
+            \item $\displaystyle\lim_{x\to 4}\left(\dfrac{1}{x}-\dfrac{1}{4}\right)\left(x-2\right)$.
+            \item $\displaystyle\lim_{x\to 4}\left(\dfrac{1}{x}-\dfrac{1}{4}\right)\left(\dfrac{1}{x-4}\right)^2$.
+        \end{multicols}
+    \end{enumerate}
+    \setlength{\delimitershortfall}{13.5pt}
+\end{enumerate}
 
 \section{Continuity}
 
+As we discussed in the last section, the meaning of continuous is that the value of the function is the limit.
 
+\begin{definition}[Continuous]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $c\in A$. We say that $f$ is \underline{continuous} at $c$ if $\displaystyle\lim_{x\to c}f(x)=f(c)$.
+\end{definition}
 
+After defining continuity at a point, we can define continuity on a set and continuous function.
 
+\begin{definition}[Continuous]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $C\subseteq A$. We say that $f$ is \underline{continuous} on $C$ if $\displaystyle\lim_{x\to c}f(x)=f(c)$ for all $c\in C$.
+\end{definition}
+
+\begin{definition}[Continuous]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. We say that $f$ is \underline{continuous} if $\displaystyle\lim_{x\to c}f(x)=f(c)$ for all $c\in A$.
+\end{definition}
+
+Using Theorem \ref{lim_op}, we have the following theorem.
+
+\begin{theorem}
+    Let $f, g$ be two functions. If $f$ and $g$ are continuous at $c$, the following statements hold.
+    \begin{enumerate}
+        \item $f+g$ is continuous at $c$.
+        \item $\alpha f$ is continuous at $c$, where $\alpha\in\bbR$.
+        \item $fg$ is continuous at $c$.
+        \item If $g(c)\ne0$, then $\dfrac{f}{g}$ is continuous at $c$.
+    \end{enumerate}
+\end{theorem}
+
+We also have a theorem about composite functions.
+
+\begin{theorem}
+    Let $f, g$ be two functions. If $g$ is continuous at $c$ and $f$ is continuous at $g(c)$, then $f\circ g$ is continuous at $c$.
+\end{theorem}
+
+\begin{example} 
+    The function $f(x)=\sqrt{\dfrac{x^2+1}{x-3}}$ is continuous on $(3, \infty)$. The function $f$ can be decomposed by $f_1\circ f_2$, where \begin{equation*}
+        f_1(x)=\sqrt{x},\quad f_2(x)=\dfrac{x^2+1}{x-3}.
+    \end{equation*}
+\end{example}
+
+\begin{example} 
+    The function $f(x)=\dfrac{1}{5-\sqrt{x^2+16}}$ is a continuous function since it is continuous everywhere except at $x=\pm3$, which is not defined. The function $f$ can be decomposed by $f_1\circ f_2\circ f_3\circ f_4$, where \begin{equation*}
+        f_1(x)=\dfrac{1}{x}, \quad f_2(x)=5-x, \quad f_3(x)=\sqrt{x}, \quad f_4(x)=x^2+16.
+    \end{equation*}
+\end{example}
+
+We can also define one-sided continuity just as one-sided limits.
+
+\begin{definition}[Left Continuity]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $c\in A$. We say that $f$ is \underline{continuous from the left} at $c$ if $\displaystyle\lim_{x\to c^-}f(x)=f(c)$.
+\end{definition}
+
+\begin{definition}[Right Continuity]
+    Let $f:A\to\bbR$ be a function, where $A\subseteq\bbR$. Let $c\in A$. We say that $f$ is \underline{continuous from the right} at $c$ if $\displaystyle\lim_{x\to c^+}f(x)=f(c)$.
+\end{definition}
+
+\begin{theorem}
+    A function $f$ is continuous at $c$ if and only if all $f(c)$, $\displaystyle\lim_{x\to c^-}f(x)$, and $\displaystyle\lim_{x\to c^+}f(x)$ exist and are equal.
+\end{theorem}
+
+\begin{example}
+    Determine the discontinuities, if any, of the following function $$f(x)=\left\{\begin{array}{rl}
+        2x+1,\quad & \text{if $x\leq 0$},\\
+        1, \quad & \text{if $0\leq x\leq 1$},\\
+        x^2+1, \quad & \text{if $x>1$}.
+    \end{array}\right.$$
+\end{example}
+\textbf{Solution}. Clearly, $f$ is continuous on $(-\infty, 0)$, on $(0, 1)$, and on $(1, \infty)$. We check whether $f$ is continuous at $x=0$ and at $x=1$. The left-hand-side limit of $f$ at $x=0$ is $$\lim_{x\to 0^-}2x+1=1$$ amd the right-hand-side limit of $f$ at $x=0$ is $$\lim_{x\to 0^+}1=1.$$ Hence, $f$ is continuous at $x=0$. The left-hand-side limit of $f$ at $x=1$ is $$\lim_{x\to 1^-}1=1$$ amd the right-hand-side limit of $f$ at $x=1$ is $$\lim_{x\to 1^+}x^2+1=2.$$ Hence, $f$ is not continuous at $x=0$. Therefore, $x=1$ is the only discontinuity. \qed
+
+We can classity discontinuities with three different genres.
+
+\begin{definition}[Removable Discontinuity]
+    Let $f$ be a function. Suppose $f$ is not continuous at $x=c$. We say the discontinuity is a \underline{removable discontinuity} if we can redefine $f(c)$ such that $f$ is continuous at $c$.
+\end{definition}
+
+\begin{definition}[Jump Discontinuity]
+    Let $f$ be a function. Suppose $f$ is not continuous at $x=c$. We say the discontinuity is a \underline{jump discontinuity} if $\displaystyle\lim_{x\to c^-}f(x)\ne\lim_{x\to c^+}f(x)$.
+\end{definition}
+
+\begin{definition}[Essential Discontinuity]
+    Let $f$ be a function. Suppose $f$ is not continuous at $x=c$. We say the discontinuity is an \underline{essential discontinuity} if $\displaystyle\lim_{x\to c^-}f(x)$ does not exist or $\displaystyle\lim_{x\to c^+}f(x)$ does not exist.
+\end{definition}
+
+\begin{example}
+    In Figure 2.4.1, $f$ has a jump discontinuity at $x=2$, a removable discontinuity at $x=6$, and a critical discontinuity at $x=8$.
+\end{example}
+
+\begin{center}
+    \includegraphics[width=0.85\textwidth]{discontinuity.png}\figtag{2.4.1}
+\end{center}
+
+\subsection*{Exercise}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Determine points such that $f$ is discontinuous at. Determine the genre of each discontinuity. Determine whether $f$ is continuous from the right, from the left, or neither for each discontinuity.
+    \begin{center}
+        \includegraphics[width=0.85\textwidth]{continuity_exercise_1.png}
+    \end{center}
+    \item Determine whether the function is continuous at the indicated point. If not, determine the genre of each discontinuity.
+    \begin{enumerate}
+        \item $f(x)=x^3-5x+1,\quad x=2$.
+    \end{enumerate}
+\end{enumerate}
 
 % Formulae for derivatives
 \chapter{Derivative and Differentiation}
