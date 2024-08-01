@@ -1421,7 +1421,7 @@ One have to remember that the numerator must be nonzero; if the numerator and th
     &=\lim_{x\to 9}\dfrac{(x-9)(\sqrt{x}+3)}{|x|-9}\\
     &=\lim_{x\to 9}\sqrt{x}+3\\
     &=6.
-\end{align*} \qed
+\end{align*} The third equation follows since we are looking around $x=9$.\qed
 
 Here comes an extremely important theorem for evaluating trigonometric limits.
 
@@ -1430,11 +1430,11 @@ Here comes an extremely important theorem for evaluating trigonometric limits.
 \end{theorem}
 
 \begin{example}
-    In Figure 2.3.1, it can be seen that $0\leq |\sin x|\leq |x|$, where the length of $\tikzarc{AB}$ is $|x|$ and the length of $\overline{AH}$ is $|\sin x|$. Using this relation, we can easily have $$\lim_{x\to 0}\sin x=0.$$
+    In Figure 2.3.1, it can be seen that $0\leq |\sin x|\leq |x|$, where the length of $\tikzarc{AB}$ is $|x|$ and the length of $\overline{AH}$ is $|\sin x|$. Note that the angle between $\overrightarrow{OA}$ and $\overrightarrow{OH}$ is $x$. Using this relation with the sandwich theorem, we can easily have $$\lim_{x\to 0}\sin x=0.$$
 \end{example}
 
 \begin{center}
-    \includegraphics[width=\textwidth]{sandwich_1.png}\figtag{2.3.1}
+    \includegraphics[width=0.79\textwidth]{sandwich_1.png}\figtag{2.3.1}
 \end{center}
 
 \begin{example}
@@ -1442,14 +1442,14 @@ Here comes an extremely important theorem for evaluating trigonometric limits.
 \end{example}
 
 \begin{theorem}
-    We have three important limits.
+    We have three important trigonometric limits.
     \begin{enumerate}
         \item $\displaystyle\lim_{x\to 0}\dfrac{\sin x}{x}=1$.
         \item $\displaystyle\lim_{x\to 0}\dfrac{1-\cos x}{x}=0$.
         \item $\displaystyle\lim_{x\to 0}\dfrac{1-\cos x}{x^2}=\dfrac{1}{2}$.
     \end{enumerate}
 \end{theorem}
-\textbf{Proof}. We first show that $\displaystyle\lim_{x\to 0}\dfrac{\sin x}{x}=1$. From Figure 2.3.1, we can see that $\Delta TOB$ contains circular sector $AOB$, and circular sector $AOB$ contains $\Delta AOB$. Hence, we have $$\dfrac{1}{2}\cdot1\cdot |\sin x|\leq\dfrac{1}{2}\cdot1\cdot|x|\leq\dfrac{1}{2}\cdot 1\cdot |\tan x|$$ for $|x|\leq\dfrac{\pi}{2}$. Deviding the inqualities by $\dfrac{|\sin x|}{2}$, we have $$1\leq\dfrac{|x|}{|\sin x|}\leq\dfrac{1}{|\cos x|}.$$ Since $\dfrac{x}{\sin x}$ and $\dfrac{1}{\cos x}$ are even, we can pill off the absolute values and take reciprocals of them, having $$1\geq\dfrac{\sin x}{x}\geq\cos x.$$ Since $\displaystyle\lim_{x\to 0}1=1$ and $\displaystyle\lim_{x\to 0}\cos x=1$, we have $\displaystyle\lim_{x\to 0}\dfrac{\sin x}{x}=1$ by the sandwich theorem. The second limit follows from the first limit:
+\textbf{Proof}. We first show that $\displaystyle\lim_{x\to 0}\dfrac{\sin x}{x}=1$. From Figure 2.3.1, we can see that $\Delta TOB$ contains circular sector $AOB$, and circular sector $AOB$ contains $\Delta AOB$. Hence, we have the inequalities about their area, $$\dfrac{1}{2}\cdot1\cdot |\sin x|\leq\dfrac{1}{2}\cdot1\cdot|x|\leq\dfrac{1}{2}\cdot 1\cdot |\tan x|$$ for $|x|\leq\dfrac{\pi}{2}$. Dividing the inqualities by $\dfrac{|\sin x|}{2}$, we have $$1\leq\dfrac{|x|}{|\sin x|}\leq\dfrac{1}{|\cos x|}.$$ Since $\dfrac{x}{\sin x}$ and $\dfrac{1}{\cos x}$ are positive near $0$, we can pill off the absolute values and take reciprocals of them, having $$1\geq\dfrac{\sin x}{x}\geq\cos x.$$ Since $\displaystyle\lim_{x\to 0}1=1$ and $\displaystyle\lim_{x\to 0}\cos x=1$, we have $\displaystyle\lim_{x\to 0}\dfrac{\sin x}{x}=1$ by the sandwich theorem. The second limit follows from the first limit:
 \begin{align*}
     \lim_{x\to 0}\dfrac{1-\cos x}{x}&=\lim_{x\to 0}\dfrac{1-\cos x}{x}\cdot\dfrac{1+\cos x}{1+\cos x}\\
     &=\lim_{x\to 0}\dfrac{1^2-(\cos x)^2}{x(1+\cos x)}\\
@@ -1458,7 +1458,9 @@ Here comes an extremely important theorem for evaluating trigonometric limits.
     &=\lim_{x\to 0}\dfrac{\sin x}{x}\cdot\lim_{x\to 0}\dfrac{\sin x}{(1+\cos x)}\\
     &=1\cdot0\\
     &=0.
-\end{align*} The third limit also follows from the first limit: \begin{align*}
+\end{align*} The third limit also follows from the first limit: 
+
+\begin{align*}
     \lim_{x\to 0}\dfrac{1-\cos x}{x^2}&=\lim_{x\to 0}\dfrac{1-\cos x}{x^2}\cdot\dfrac{1+\cos x}{1+\cos x}\\
     &=\lim_{x\to 0}\dfrac{(\sin x)^2}{x^2(1+\cos x)}\\
     &=\lim_{x\to 0}\dfrac{(\sin x)^2}{x^2}\cdot\dfrac{1}{(1+\cos x)}\\
@@ -1485,9 +1487,11 @@ Here comes an extremely important theorem for evaluating trigonometric limits.
     &=\dfrac{1}{7}.
 \end{align*} \qed
 
-\begin{remark}
-    One have to check the interval of continuity, then apply the intermediate value theorem or the extreme value theroem.
-\end{remark}
+We now define an essential number for our future studies.
+
+\begin{definition}[Euler's Number]
+    Let $r\in\bbR$. If $\displaystyle\lim_{h\to 0}\dfrac{r^h-1}{h}=1$, then the number $r$ is called \underline{Euler's number} and is denoted $e$. This number is uniquely defined and has at least three kinds of equivalent definitions. The exponential function is defined with base $e$.
+\end{definition}
 
 \subsection*{Exercise}
 
@@ -1578,6 +1582,15 @@ Here comes an extremely important theorem for evaluating trigonometric limits.
             \item $\displaystyle\lim_{x\to 0}\dfrac{\sin ax}{\sin bx}, \quad a\ne0, \ \ b\ne0$.
             \item $\displaystyle\lim_{x\to 0}\dfrac{\cos ax}{\cos bx}, \quad a\ne0, \ \ b\ne0$.
             \item $\displaystyle\lim_{x\to 0}\dfrac{\tan ax}{\tan bx}, \quad a\ne0, \ \ b\ne0$.
+        \end{multicols}
+    \end{enumerate}
+    \item Find the value of $r$ for each of the following constrain.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $\displaystyle\lim_{x\to 0}\dfrac{\sin (rx)}{2x}=4$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{1-\cos (rx)}{x^2}=1$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{e^{rx}-1}{x}=2$.
+            \item $\displaystyle\lim_{x\to 0}\dfrac{e^{5x}-1}{rx}=1$.
         \end{multicols}
     \end{enumerate}
     \item Show that the each of the following statements hold.
@@ -1711,18 +1724,23 @@ From the intermediate value theorem, we know that a continuous function maps an 
     In Figure 2.4.2, this function attains neither a maximum nor a minimum on $[0, 2]$ since it is not continuous on the endpoints.
 \end{example}
 
+From the extreme value theorem, we know that a continuous function maps a closed and bounded interval to another closed and bounded interval.
+
+\begin{remark}
+    One have to check the interval of continuity, then apply the intermediate value theorem or the extreme value theroem.
+\end{remark}
+
 \begin{center}
     \includegraphics[width=0.45\textwidth]{evt.png}\figtag{2.4.2}
 \end{center}
 
-From the extreme value theorem, we know that a continuous function maps a closed and bounded interval to another closed and bounded interval.
 
 \subsection*{Exercise}
 
 \begin{enumerate}[label=\arabic*.]
     \item Determine points such that $f$ is discontinuous at. Determine the genre of each discontinuity. Determine whether $f$ is continuous from the right, from the left, or neither for each discontinuity.
     \begin{center}
-        \includegraphics[width=0.94\textwidth]{continuity_exercise_1.png}
+        \includegraphics[width=0.87\textwidth]{continuity_exercise_1.png}
     \end{center}
     \item Determine whether the function is continuous at the indicated point. If not, determine the genre of each discontinuity.
     \begin{enumerate}
@@ -1926,9 +1944,17 @@ In fact, the derivative $f'$ is also a function; it is only defined at points wh
     &=-\dfrac{1}{x^2}.
 \end{align*} The domain of $f'(x)$ is $\bbR\setminus\{0\}$. \qed
 
-\begin{remark}
-    The action ``to find the derivative'' is called differentiate. That is, we differentiate a function $f$ to obtain its derivative (function) $f'$.
-\end{remark}
+\begin{example}
+    Find the derivative $f'$ of $f(x)=e^x$.
+\end{example}
+\textbf{Solution}. By definition, \begin{align*}
+    \lim_{h\to 0}\dfrac{e^{x+h}-e^x}{h}&=\lim_{h\to 0}\dfrac{e^x(e^h-1)}{h}\\
+    &=e^x\lim_{h\to 0}\dfrac{e^h-1}{h}\\
+    &=e^x\cdot 1\\
+    &=e^x.
+\end{align*} \qed
+
+It turns out that the derivative of $e^x$ is itself. The action ``to find the derivative'' is called differentiate. That is, we differentiate a function $f$ to obtain its derivative (function) $f'$.
 
 \begin{example}
     Differentiate $f(x)=\sin x$.
@@ -1981,15 +2007,12 @@ It strikes us that are continuous functions all differentiable? In fact, differe
     \begin{enumerate}
         \begin{multicols}{3}
             \item $f(x)=5-2x$.
-            \item $f(x)=c, \quad c\in\bbR$.
+            \item $f(x)=k, \quad k\in\bbR$.
             \item $f(x)=ax+b, \quad a, b\in\bbR$.
             \item $f(x)=x^3$.
-            \item $f(x)=2x^3$.
-            \item $f(x)=x^4$.
             \item $f(x)=x^2-2x$.
-            \item $f(x)=x^3-x^2+2x$.
             \item $f(x)=\dfrac{1}{\sqrt{x}}$.
-            \item $f(x)=2x^3+c$.
+            \item $f(x)=2x^3+c, \quad c\in\bbR$.
             \item $f(x)=\dfrac{8}{x+4}$.
             \item $f(x)=\sqrt{6-x}$.
         \end{multicols}
@@ -2043,10 +2066,10 @@ Just like ones to continuous functions, there are operations tfor differentiable
 \begin{theorem}[Operations for Differentiable Functions]\label{diff_op}
     Let $\alpha\in\bbR$. If $f$ and $g$ are differentiable at $x$, then the following are true.
     \begin{enumerate}
-        \item (\textit{Sum Rule}) The sum $f+g$ is differentiable, and the derivative of $f+g$ is $f'+g'$, i.e., $(f+g)'=f'+g'$.
-        \item (\textit{Scalar Multiple Rule}) The scalar product $\alpha f$ is differentiable, and the derivative of $\alpha f$ is $\alpha f'$, i.e., $(\alpha f)'=\alpha f'$.
-        \item (\textit{Product Rule}) The product $fg$ of functions is differentiable, and the derivative of $fg$ is $f'g+fg'$, i.e., $(fg)'=f'g+fg'$.
-        \item (\textit{Reciprocal Rule}) If $g(x)\ne 0$, then the reciprocal of $g$ is differentiable, and the derivative of $\dfrac{1}{g}$ is $-\dfrac{g'}{g^2}$, i.e., $\left(\dfrac{1}{g}\right)'=-\dfrac{g'}{g^2}$.
+        \item (\textit{Sum Rule}) The sum $f+g$ is differentiable, and the derivative of the sum is the sum of the derivatives, i.e., $(f+g)'=f'+g'$.
+        \item (\textit{Scalar Multiple Rule}) The scalar product $\alpha f$ is differentiable, and the derivative of the scalar product is the scalar product of the derivative, i.e., $(\alpha f)'=\alpha f'$.
+        \item (\textit{Product Rule}) The product $fg$ is differentiable, and $(fg)'=f'g+fg'$.
+        \item (\textit{Reciprocal Rule}) If $g(x)\ne 0$, then the reciprocal of $g$ is differentiable, and $\left(\dfrac{1}{g}\right)'=-\dfrac{g'}{g^2}$.
     \end{enumerate}
 \end{theorem}
 
@@ -2079,6 +2102,60 @@ Just like ones to continuous functions, there are operations tfor differentiable
 \end{align*} \qed
 
 If one cannot see the first equation in the proof of the previous corollary, compare $$-\dfrac{(-k)x^{-k-1}}{(x^{-k})^2}\qquad\text{and}\qquad-\dfrac{g'}{g^2}.$$
+
+\subsection*{Exercise}
+
+\begin{enumerate}[label=\arabic*.]
+    \item Differentiate the following functions.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $f(x)=-x$.
+            \item $f(x)=2-2x$.
+            \item $f(x)=7x^3+2x^2+5$.
+            \item $f(x)=\dfrac{e}{x^2}$.
+            \item $f(x)=ax^2+bx+c, \quad a, b, c\in\bbR$.
+            \item $f(x)=\dfrac{x^6}{6}+\dfrac{x^5}{5}+\dfrac{x^4}{4}+\dfrac{x^3}{3}+\dfrac{x^2}{2}+x+1$.
+            \item $f(x)=\dfrac{1}{x^2+9}$.
+            \item $f(x)=\dfrac{x^2+9}{x}$.
+            \item $f(x)=\dfrac{x^4-4}{x^2-2}$.
+            \item $f(x)=\dfrac{1+x^3}{2x^2-1}$.
+            \item $f(x)=(5x^4-7x^2+1)\cdot(x^{12}+4x^5+3x-2)$.
+            \item $f(x)=\dfrac{x^2-1}{x^2+1}$.
+        \end{multicols}
+    \end{enumerate}
+    \item Find an equation for the tangent line at the point $(c, f(c))$.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $f(x)=x^3+3x+6, c=-1$.
+            \item $f(x)=\dfrac{5}{x^2+1}, c=2$.
+        \end{multicols}
+    \end{enumerate}
+    \item Differentiate the following functions.
+    \begin{enumerate}
+        \begin{multicols}{3}
+            \item $f(x)=\cot x$.
+            \item $f(x)=\sec x$.
+            \item $f(x)=\csc x$.
+        \end{multicols}
+    \end{enumerate}
+    \item Find the number pair $(A, B)$ such that the derivative of $f$ is everywhere continuous for the following functions.
+    \begin{enumerate}
+        \begin{multicols}{2}
+            \item $f(x)=\left\{\begin{array}{rl}
+                Ax^3+Bx+2, \quad &\text{if $x\leq 2$},\\
+                Bx^2-A, &\text{if $x>2$}.
+            \end{array}\right.$
+            \item $f(x)=\left\{\begin{array}{rl}
+                Ax^2+B, \quad &\text{if $x<-1$},\\
+                Bx^5+Ax+4, &\text{if $x\geq -1$}.
+            \end{array}\right.$
+        \end{multicols}
+    \end{enumerate}
+\end{enumerate}
+
+\section{Derivatives of Higher Orders}
+
+\section{The Chain Rule}
 
 % Graph drawing, l'Hospital
 \chapter{Application of Differentiation}
