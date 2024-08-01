@@ -1093,7 +1093,7 @@ For a limit to exist, both the left-hand-side limit and the right-hand-side limi
 \end{example}
 
 \begin{example}
-    In Figure 2.1.4, the graph of $f(x)=\dfrac{1}{x-2}$ is depicked. As $x$ approaches $4$, $\dfrac{1}{x-2}$ approaches $\dfrac{1}{2}$. Hence, $\displaystyle\lim_{x\to 4}\dfrac{1}{x-2}=\dfrac{1}{2}$. However, as approaches $2$, $\dfrac{1}{x-2}$ gets larger and lager, and $\dfrac{1}{x-2}$ is hence unbounded.
+    In Figure 2.1.4, the graph of $f(x)=\dfrac{1}{x-2}$ is depicked. As $x$ approaches $4$, $\dfrac{1}{x-2}$ approaches $\dfrac{1}{2}$. Hence, $\displaystyle\lim_{x\to 4}\dfrac{1}{x-2}=\dfrac{1}{2}$. However, as approaches $2$, $\dfrac{1}{x-2}$ gets larger and larger, and $\dfrac{1}{x-2}$ is hence unbounded.
 \end{example}
 
 \begin{example}
@@ -1372,7 +1372,7 @@ We introduce some theorems related to limits here. We will state them and skip t
     If $\displaystyle\lim_{x\to c}f(x)=L$ and $\displaystyle\lim_{x\to c}f(x)=M$, then $L=M$. That is, the limit of a function at a point is unique.
 \end{theorem}
 
-\begin{theorem}[Operations of Limits]\label{lim_op}
+\begin{theorem}[Operations for Limits]\label{lim_op}
     If $\displaystyle\lim_{x\to c}f(x)=L$ and $\displaystyle\lim_{x\to c}g(x)=M$, the following statements hold.
     \begin{enumerate}
         \item $\displaystyle\lim_{x\to c}f(x)+g(x)=L+M$.
@@ -1613,7 +1613,7 @@ After defining continuity at a point, we can define continuity on a set and cont
 
 Using Theorem \ref{lim_op}, we have the following theorem.
 
-\begin{theorem}
+\begin{theorem}[Operations for Continuous Functions]\label{conti_op}
     Let $f, g$ be two functions. If $f$ and $g$ are continuous at $c$, the following statements hold.
     \begin{enumerate}
         \item $f+g$ is continuous at $c$.
@@ -1681,7 +1681,7 @@ Different discontinuities yields different scenarios: some lost a point, some is
 \begin{example}
     In Figure 2.4.1, $f$ has a jump discontinuity at $2$, a removable discontinuity at $6$, and a critical discontinuity at $8$.
 \end{example}
-\textbf{Proof}. The two one-sided limits of $f$ at $2$ are different; we can define $f(6)=1$ to make $f$ continuous at $6$. The value of $f$ gets larger and larger as $x$ approaches $8$ from the left. \qed
+\textbf{Proof}. The two one-sided limits of $f$ at $2$ are different; we can define $f(6)=1$ to make $f$ continuous at $6$. The value of $f$ gets larger and larger as $x$ approaches $8$ from the left; hence $f$ is unbounded near $8$. \qed 
 
 If a function $f$ is continuous on an interval $I$, there will be neither holes nor jumps for the graph of $f$ on $I$. We can describe this by the intermediate value theorem. This theorem garuantees that every value between values of endpoints will be attained on the interval where $f$ is continuous.
 
@@ -1931,6 +1931,18 @@ In fact, the derivative $f'$ is also a function; it is only defined at points wh
 \end{remark}
 
 \begin{example}
+    Differentiate $f(x)=\sin x$.
+\end{example}
+\textbf{Solution}. By definition, the derivative of $\sin x$ is \begin{align*}
+    \lim_{h\to 0}\dfrac{\sin(x+h)-\sin x}{h}&=\lim_{h\to 0}\dfrac{\sin x\cos h+\cos x\sin h-\sin x}{h}\\
+    &=\lim_{h\to 0}\dfrac{\sin x(\cos h-1)+\cos x\sin h}{h}\\
+    &=\lim_{h\to 0}\dfrac{\sin x(\cos h-1)}{h}+\lim_{h\to 0}\dfrac{\cos x\sin h}{h}\\
+    &=\sin x\cdot 0+\cos x\cdot 1\\
+    &=\cos x.
+\end{align*}
+Hence, the derivative of $\sin x$ is $\cos x$. \qed
+
+\begin{example}
     Find an equation of the tangent line to $f(x)=x^2$ at $3$.
 \end{example}
 \textbf{Solution}. Recall that a line $L$ with slope $m$ through point $(x_0, y_0)$ is $$L:y-y_0=m(x-x_0).$$ We know that the derivative of $x^2$ is $2x$; one should check it before proceed. Hence, the slope of $f$ at $3$ is $2\cdot 3=6$. Since $f(3)=9$, an equation for the tangent line to $f(x)=x^2$ at $3$ is $y-9=6(x-3)$. \qed
@@ -1967,10 +1979,10 @@ It strikes us that are continuous functions all differentiable? In fact, differe
 \begin{enumerate}[label=\arabic*.]
     \item Differentiate the following functions by definition.
     \begin{enumerate}
-        \begin{multicols}{2}
+        \begin{multicols}{3}
             \item $f(x)=5-2x$.
             \item $f(x)=c, \quad c\in\bbR$.
-            \item $f(x)=ax+b, \quad a\in\bbR, \quad b\in\bbR$.
+            \item $f(x)=ax+b, \quad a, b\in\bbR$.
             \item $f(x)=x^3$.
             \item $f(x)=2x^3$.
             \item $f(x)=x^4$.
@@ -2020,9 +2032,53 @@ It strikes us that are continuous functions all differentiable? In fact, differe
             \end{array}\right.\quad c=0$.
         \end{multicols}
     \end{enumerate}
+    \item Differentiate $f(x)=\cos x$ by definition.
 \end{enumerate}
 
 \section{Differentiation Formulas}
+
+Just like ones to continuous functions, there are operations tfor differentiable functions.
+
+\setlength{\delimitershortfall}{0pt}
+\begin{theorem}[Operations for Differentiable Functions]\label{diff_op}
+    Let $\alpha\in\bbR$. If $f$ and $g$ are differentiable at $x$, then the following are true.
+    \begin{enumerate}
+        \item (\textit{Sum Rule}) The sum $f+g$ is differentiable, and the derivative of $f+g$ is $f'+g'$, i.e., $(f+g)'=f'+g'$.
+        \item (\textit{Scalar Multiple Rule}) The scalar product $\alpha f$ is differentiable, and the derivative of $\alpha f$ is $\alpha f'$, i.e., $(\alpha f)'=\alpha f'$.
+        \item (\textit{Product Rule}) The product $fg$ of functions is differentiable, and the derivative of $fg$ is $f'g+fg'$, i.e., $(fg)'=f'g+fg'$.
+        \item (\textit{Reciprocal Rule}) If $g(x)\ne 0$, then the reciprocal of $g$ is differentiable, and the derivative of $\dfrac{1}{g}$ is $-\dfrac{g'}{g^2}$, i.e., $\left(\dfrac{1}{g}\right)'=-\dfrac{g'}{g^2}$.
+    \end{enumerate}
+\end{theorem}
+
+\begin{example}
+    Differentiate the following functions.
+    \begin{enumerate}
+        \item $f_1(x)=x^2$.
+        \item $f_2(x)=x^n, \quad n\in\bbN$.
+        \item $f_3(x)=x^{256}+x^{64}+x^{16}+4$.
+        \item $f_4(x)=(4x^6+2x^3-7)(5x^2+x)$.
+        \item $f_5(x)=\tan x$.
+    \end{enumerate}
+\end{example}
+\textbf{Solution}. For $f_1$, we consider $x^2$ as $x\cdot x$ and use the product rule. That is, the derivative of $x^2$ is $1\cdot x+x\cdot 1=2x$. For $f_2$, we use induction on $n$ to show that the derivative of $x^n$ is $nx^{n-1}$. We already know the case $n=1$ holds. Suppose the derivative of $x^k$ is $kx^{k-1}$. Then, the derivative of $x^{k+1}$ is \begin{align*}
+    1\cdot x^k+x\cdot kx^{k-1}&=x^k+kx^k\\
+    &=(k+1)x^k.
+\end{align*} We have hence proved the statement by induction. For $f_3$, we simply apply the sum rule with (ii) and have $${f_3}'(x)=256x^{255}+64x^{63}+16x^{15}.$$ For $f_4$, we use the product rule with (ii), having $${f_4}'(x)=(24x^5+6x)(5x^2+x)+(4x^6+2x^3-7)(10x).$$ For $f_5$, we use the product rule and the reciprocal rule together, having \begin{align*}
+    {f_5}'(x)&=\cos x\cdot\dfrac{1}{\cos x}+\sin x\cdot\left(-\dfrac{-\sin x}{(\cos x)^2}\right)\\
+    &=1+(\tan x)^2\\
+    &=(\sec x)^2.
+\end{align*} \qed
+\setlength{\delimitershortfall}{13.5pt}
+
+\begin{corollary}
+    The derivative of $f(x)=x^k$ is $kx^{k-1}$ for all $k\in\mathbb{Z}\setminus\{0\}$.
+\end{corollary}
+\textbf{Proof}. The case for $k\in\bbN$ is already shown. For $k\in\mathbb{Z}$ with $k<0$, we simply apply the reciprocal rule, having \begin{align*}
+    f'(x)&=-\dfrac{(-k)x^{-k-1}}{(x^{-k})^2}\\
+    &=kx^{k-1}.
+\end{align*} \qed
+
+If one cannot see the first equation in the proof of the previous corollary, compare $$-\dfrac{(-k)x^{-k-1}}{(x^{-k})^2}\qquad\text{and}\qquad-\dfrac{g'}{g^2}.$$
 
 % Graph drawing, l'Hospital
 \chapter{Application of Differentiation}
