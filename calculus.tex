@@ -444,11 +444,15 @@ We use a small number on the top-right of another number to indicate the ``power
 
 \begin{example}
     By the texts above, we have 
-    \begin{enumerate}
-        \item $(-2)^2=4$,
-        \item $5^4=625$,
-        \item $(-1)^5=-1$.
-    \end{enumerate}
+    \vspace{-1em}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $(-2)^2=4$,
+            \item $5^4=625$,
+            \item $(-1)^5=-1$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.1em}
 \end{example}
 
 \begin{notation}
@@ -459,11 +463,15 @@ We have some special formulas for products and quotients of powers.
 
 \begin{theorem}[Laws of Exponents]
     Let $a>0$ and $p, q\in\mathbb R$. The following hold.
-    \begin{enumerate}
-        \item $a^{p+q}=a^p+a^q$.
-        \item $a^{p-q}=\dfrac{a^p}{a^q}$.
-        \item $(a^p)^q=a^{pq}$.
-    \end{enumerate}
+    \vspace{-1em}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $a^{p+q}=a^p+a^q$.
+            \item $a^{p-q}={a^p}/{a^q}$.
+            \item $(a^p)^q=a^{pq}$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.1em}
 \end{theorem}
 
 \begin{example}
@@ -531,10 +539,12 @@ Factorization is crucial for solving inequalities and finding roots.
     \end{enumerate}
     \item Determine true or false for each of the following statements.
     \begin{enumerate}
-        \item $1$ is the smallest positive integer.
-        \item $-1$ is the smallest negative integer.
-        \item $0$ is an integer.
-        \item $1$ is the smallest positive integer.
+        \begin{multicols}{2}
+            \item $1$ is the smallest positive integer.
+            \item $-1$ is the smallest negative integer.
+            \item $0$ is an integer.
+            \item $1$ is the smallest positive integer.
+        \end{multicols}
     \end{enumerate}
     \item Answer the following questions.
     \begin{enumerate}
@@ -568,8 +578,10 @@ Factorization is crucial for solving inequalities and finding roots.
     \end{enumerate}
     \item Answer the following questions.
     \begin{enumerate}
-        \item What is $[0, 2]\cap(2, 4)$?
-        \item What is $[0, 1]\setminus(0, \infty)$?
+        \begin{multicols}{2}
+            \item What is $[0, 2]\cap(2, 4)$?
+            \item What is $[0, 1]\setminus(0, \infty)$?
+        \end{multicols}
         \item What is the interval $I$ such that only elements $x$ in $I$ suffice $|x|\leq 3$?
         \item What is the interval $J$ such that only elements $x$ in $J$ suffice $x^2<16$?
     \end{enumerate}
@@ -663,17 +675,15 @@ For the first scenario, $(3, \infty)$ is the set of solutions. For the second sc
 
 \section{Functions}
 
-Functions can be imagined as a black box. You throw a parameter $x$ into the black box $f$, and then you obtain the result $f(x)$. Mathematically speaking, a function is a correspondence between two sets, domain and range. For example, a teacher is marking exams for students. There are twenty questions in total. A student gets five points with a correct answer to a question. In this case, the score is a function of the number of correct answers. In mathematical language, we say the score is $f_{\text{score}}(x)=5x$, where $x$ is the number of correct answers. Since the number of correct answers can only be positive integers among $0$ and $20$, we say the domain (the set where the function is valid) is $\{0, 1, 2, \dots, 19, 20\}$. The range, the set with all positive outcomes for the function, is $\{0, 5, 10, \dots, 95, 100\}$ in this case.
+Functions can be imagined as a black box. You throw a parameter $x$ into the black box $f$, and then you obtain the result $f(x)$. Mathematically speaking, a function is a correspondence between two sets, domain and range.
+
+For example, a teacher is marking exams for students. There are twenty questions in total. A student gets five points with a correct answer to a question. In this case, the score is a function of the number of correct answers. In mathematical language, we say the score is $f_{\text{score}}(x)=5x$, where $x$ is the number of correct answers. Since the number of correct answers can only be positive integers among $0$ and $20$, we say the domain (the set where the function is valid) is $\{0, 1, 2, \dots, 19, 20\}$. The range, the set with all positive outcomes for the function, is $\{0, 5, 10, \dots, 95, 100\}$ in this case.
 
 To be more specific, we use a colon ``$:$'' and an arrow ``$\to$'' to indicate the function and its domain and codomain (a set that contains the range). One generally indicates codomain since one does not know exactly the range is. For example, I can write $f_{\text{score}}:\{0, 1, 2, \dots, 19, 20\}\to\bbN$, which indicates that the domain of the function $f_{\text{score}}$ is $\{0, 1, 2, \dots, 19, 20\}$, and all the outputs will be in $\bbN$.
 
 Take another familiar example, the square function $f_{\text{square}}$. The square function outputs the square of an input. Since you can square any real numbers, we write $f_{\text{square}}:\bbR\to\bbR$ with $f(x)=x^2$ for all $x\in\bbR$, or more specificly, $f_{\text{square}}:\bbR\to\bbR_{\geq0}$ with $f(x)=x^2$ for all $x\in\bbR$. One can use the arrow with a small stroke on the left ``$\mapsto$'' to indicate the way of mapping. For example, $x\mapsto x^2$ is the square function. We are familiar with the absolute value. In fact, the absolute value is a function with domain $\bbR$ and range $[0, \infty)$.
 
 Usually, we call the input $x$ the independent variable (or argument), and we call the output $y$ the dependent variable, since $y$ varies on $x$.
-
-\begin{definition}[Injective, Surjective, and Bijective]
-    A function $f:X\to Y$ is \underline{injective} if $x_1\ne x_2\in X$ implies $f(x_1)\ne f(x_2)$. A function $g:X\to Y$ is \underline{surjective} if there exists a $x\in X$ such that $f(x)=y$ for all $y\in Y$. A function is bijective if it is surjective and injective.
-\end{definition}
 
 \begin{definition}[Graph]
     Let $f:X\to Y$ be a function. The \underline{graph} of $f$ is the set $$\{(x, y)\mid x\in X\text{ and }y=f(x)\}.$$
@@ -689,14 +699,18 @@ Functions in both genres are all called ``symmetric'' since an even function is 
 
 \begin{example}
     Determine whether the following functions are even, odd, or neither.
-    \begin{enumerate}
-        \item $f_1(x)=x$.
-        \item $f_2(x)=x+1$.
-        \item $f_3(x)=|x|$.
-        \item $f_4(x)=x^2$.
-        \item $f_5(x)=x^3$.
-        \item $f_6(x)=2^x+2^{-x}$.
-    \end{enumerate}
+    \vspace{-1em}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $f_1(x)=x$.
+            \item $f_2(x)=x+1$.
+            \item $f_3(x)=|x|$.
+            \item $f_4(x)=x^2$.
+            \item $f_5(x)=x^3$.
+            \item $f_6(x)=2^x+2^{-x}$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.1em}
 \end{example}
 \textbf{Solution}. The function $f_1$ is odd since $f_1(x)=x=-f_1(x)=-(-x)$. The function $f_2$ is neither even nor odd. The function $f_3$ is even since $|x|=|-x|$. The function $f_4$ is also even. The function $f_5$ is odd. The function $f_6$ is even since $f_6(x)=2^x+2^{-x}=f_6(-x)=2^{-x}+2^x$. \qed
 
@@ -772,21 +786,29 @@ The functions that figure most prominently in single-variable calculus are the p
 
 \begin{example}
     The following are polynomials.
-    \begin{enumerate}
-        \item $x^2+x+1$.
-        \item $-\pi x^4-7$.
-        \item $x^{256}$.
-        \item $0$.
-    \end{enumerate}
+    \vspace{-1em}
+    \begin{multicols}{4}
+        \begin{enumerate}
+            \item $x^2+x+1$.
+            \item $-\pi x^4-7$.
+            \item $x^{256}$.
+            \item $0$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.1em}
 \end{example}
 
 \begin{example}
     The following are \textbf{NOT} polynomials.
-    \begin{enumerate}
-        \item $x+1+\dfrac{1}{x}$.
-        \item $|x|+5$.
-        \item $\sqrt{2x}-7$.
-    \end{enumerate}
+    \vspace{-1em}
+    \begin{multicols}{3}
+        \begin{enumerate}
+            \item $x+1+\dfrac{1}{x}$.
+            \item $|x|+\dfrac{5}{2}$.
+            \item $\sqrt{2x}-\dfrac{7}{9}$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.1em}
 \end{example}
 
 \begin{definition}[Polynomial Function]
@@ -811,10 +833,14 @@ A rational function will have a vertical asymptote at $a$ such that $P_2(a)=0$. 
 
 \begin{example}
     Find vertical asymptotes of the following functions.
-    \begin{enumerate}
-        \item $f_1(x)=\dfrac{1}{x^2+4x+4}$.
-        \item $f_2(x)=\dfrac{1}{x^2-1}$.
-    \end{enumerate}
+    \vspace{-1em}
+    \begin{multicols}{2}
+        \begin{enumerate}
+            \item $f_1(x)=\dfrac{1}{x^2+4x+4}$.
+            \item $f_2(x)=\dfrac{1}{x^2-1}$.
+        \end{enumerate}
+    \end{multicols}
+    \vspace{0.2em}
 \end{example}
 \textbf{Solution}. For function $f_1$, since $x^2+4x+4=(x+2)^2$, the vertical asymptote is $x=-2$. For function $f_2$, since $x^2-1=(x+1)(x-1)$, the vertical asymptotes are $x=1$ and $x=-1$. \qed
 
@@ -870,7 +896,7 @@ A rotation of $\pi\ \text{rad}$ takes each point to the point antipodal to it: $
 
 In Figure 1.4.4, we consider two rotations, a positive rotation $\theta$ and its negative counterpart $-\theta$, from point $A$ respectively to point $P$ and to point $P'$. From the figure, you can see that $$\sin(-\theta)=-\sin\theta\qquad\text{and}\qquad\cos(-\theta)=\cos\theta.$$
 
-\subsubsection*{Tangent, Cotangent, Secant, Cosecant}
+\subsubsection*{Tangent, Cotangent, Secant, and Cosecant}
 
 We have four more trigonometric functions: the tangent, the cotangent, the secant, the cosecant. These are obtained as follows: $$\tan\theta=\dfrac{\sin\theta}{\cos\theta},\qquad\cot\theta=\dfrac{\cos\theta}{\sin\theta},\qquad\sec\theta=\dfrac{1}{\cos\theta},\qquad\text{and}\qquad\csc\theta=\dfrac{1}{\sin\theta}.$$ Note that the tangent function is an odd function, $$\tan(-\theta)=\dfrac{\sin(-\theta)}{\cos(-\theta)}=\dfrac{-\sin\theta}{\cos\theta}=-\tan\theta.$$
 
@@ -937,6 +963,8 @@ We have four more trigonometric functions: the tangent, the cotangent, the secan
     \item Compute $\sin\theta$ and $\cos\theta$ with $\theta=0, \dfrac{\pi}{6}, \dfrac{\pi}{4}, \dfrac{\pi}{3}, \dfrac{\pi}{2}, \dfrac{2\pi}{3}, \dfrac{3\pi}{4}, \pi.$
     \item Given the fact that $\log_{10}a=3$, what is the value of $a$?
     \item Given the fact that $\log_{2}b=10$, what is the value of $b$?
+    \item Given the fact that $\log_{3}c=27$, what is the value of $c$?
+    \item Given the fact that $\log_{d}512=10$, give a possible value of $d$.
     \item Given the fact that $a=10^{3.5}$, what is the value of $\log_{10}a$?
     \item Given the fact that $b=2^{24}$, what is the value of $\log_{2}b$?
     \item Given the fact that $c=2^{128}$, what is the value of $\log_{4}b$?
@@ -965,7 +993,7 @@ Just like numbers, we can add functions $$(f+g)(x)=f(x)+g(x),$$ multiply functio
 Aside from the operations you already knew, there is a new operation, called ``composition.''
 
 \begin{definition}[Composition]
-    Let $f:\tilde{X}\to X$ and $g:X\to Y$. We define the \underline{composition} of $f$ with $g$, denoted by $f\circ g$, by $(f\circ g)(x)=f(g(x))$.
+    Let $f:\tilde{X}\to X$ and $g:X\to Y$. We define the \underline{composition} of $f$ with $g$, denoted by $f\circ g:\tilde{X}\to Y$, by $(f\circ g)(x)=f(g(x))$.
 \end{definition}
 
 \begin{example}
